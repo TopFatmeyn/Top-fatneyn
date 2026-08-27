@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TOP.FATMEYN | Cyber Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020504;
+    color:#eafff0;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+/* MATRIX */
+#matrix{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    opacity:.17;
+}
+
+/* BACKGROUND GLOW */
+body:before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00ff66;
+    filter:blur(180px);
+    opacity:.08;
+    top:10%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:-9;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    padding:0 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,255,102,.25);
+    z-index:1000;
+}
+
+/* LOGO */
+.logo{
+    position:relative;
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:2px solid #00ff66;
+    border-radius:50%;
+    color:#00ff66;
+    font-family:monospace;
+    font-size:18px;
+    font-weight:bold;
+    text-shadow:0 0 12px #00ff66;
+    box-shadow:
+        0 0 15px rgba(0,255,102,.5),
+        inset 0 0 12px rgba(0,255,102,.2);
+    animation:logoSpin 5s linear infinite;
+}
+
+.logo:before{
+    content:"";
+    position:absolute;
+    width:58px;
+    height:58px;
+    border:1px dashed #00ff66;
+    border-radius:50%;
+    animation:reverseSpin 4s linear infinite;
+}
+
+.logo:after{
+    content:"";
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:#00ff66;
+    border-radius:50%;
+    top:-5px;
+    box-shadow:0 0 12px #00ff66;
+}
+
+@keyframes logoSpin{
+    to{transform:rotate(360deg);}
+}
+
+@keyframes reverseSpin{
+    to{transform:rotate(-360deg);}
+}
+
+/* NAV LINKS */
+.links a{
+    color:#cbd5cf;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#00ff66;
+    text-shadow:0 0 12px #00ff66;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:110px 20px 60px;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:fadeUp 1.2s ease;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid #00ff66;
+    border-radius:20px;
+    color:#00ff66;
+    font-family:monospace;
+    font-size:11px;
+    letter-spacing:2px;
+    animation:pulse 2s infinite;
+}
+
+.hero h1{
+    margin-top:25px;
+    font-size:clamp(43px,10vw,85px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    color:#00ff66;
+    text-shadow:
+        0 0 10px #00ff66,
+        0 0 35px #00ff66;
+}
+
+/* GLITCH */
+.glitch{
+    position:relative;
+}
+
+.glitch:before,
+.glitch:after{
+    content:attr(data-text);
+    position:absolute;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    opacity:.55;
+}
+
+.glitch:before{
+    color:#00ff66;
+    animation:glitch1 2.5s infinite;
+}
+
+.glitch:after{
+    color:white;
+    animation:glitch2 2s infinite;
+}
+
+@keyframes glitch1{
+    0%,90%,100%{
+        clip-path:inset(0 0 100% 0);
+        transform:translate(0);
+    }
+    93%{
+        clip-path:inset(15% 0 65% 0);
+        transform:translate(-4px);
+    }
+    96%{
+        clip-path:inset(45% 0 30% 0);
+        transform:translate(4px);
+    }
+}
+
+@keyframes glitch2{
+    0%,88%,100%{
+        clip-path:inset(100% 0 0 0);
+        transform:translate(0);
+    }
+    92%{
+        clip-path:inset(60% 0 10% 0);
+        transform:translate(4px);
+    }
+}
+
+/* TERMINAL */
+.terminal{
+    max-width:650px;
+    margin:35px auto 0;
+    background:rgba(0,10,5,.92);
+    border:1px solid #00ff66;
+    border-radius:12px;
+    overflow:hidden;
+    text-align:left;
+    box-shadow:0 0 30px rgba(0,255,102,.13);
+}
+
+.terminal-header{
+    padding:10px 14px;
+    border-bottom:1px solid #123d24;
+    color:#64756b;
+    font-family:monospace;
+    font-size:12px;
+}
+
+.dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    background:#00ff66;
+    border-radius:50%;
+    margin-right:7px;
+    box-shadow:0 0 10px #00ff66;
+}
+
+.terminal-body{
+    padding:20px;
+    min-height:85px;
+    font-family:monospace;
+    color:#00ff66;
+    font-size:13px;
+}
+
+.cursor{
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+/* BUTTONS */
+.buttons{
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 27px;
+    margin:5px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#00ff66;
+    color:#001b09;
+    box-shadow:0 0 20px rgba(0,255,102,.3);
+}
+
+.secondary{
+    color:#00ff66;
+    border:1px solid #00ff66;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.primary:hover{
+    box-shadow:0 0 40px rgba(0,255,102,.7);
+}
+
+.secondary:hover{
+    background:#00ff66;
+    color:#001b09;
+}
+
+/* SECTIONS */
+section{
+    padding:100px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#00ff66;
+    font-size:35px;
+    text-shadow:0 0 15px rgba(0,255,102,.4);
+}
+
+.section-title p{
+    margin-top:8px;
+    color:#68756d;
+}
+
+/* ABOUT */
+.about-box{
+    max-width:850px;
+    margin:auto;
+    padding:35px;
+    background:rgba(5,15,9,.75);
+    border:1px solid #124c2a;
+    border-radius:20px;
+    text-align:center;
+}
+
+.about-box p{
+    color:#aab6ae;
+    font-size:17px;
+}
+
+/* SERVICES */
+.services{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    padding:32px 25px;
+    text-align:center;
+    background:rgba(4,13,8,.85);
+    border:1px solid #143d25;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:2px;
+    background:#00ff66;
+    box-shadow:0 0 15px #00ff66;
+    transition:.5s;
+}
+
+.card:hover:before{
+    left:0;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#00ff66;
+    box-shadow:0 0 30px rgba(0,255,102,.13);
+}
+
+.card-icon{
+    width:62px;
+    height:62px;
+    margin:0 auto 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #00ff66;
+    border-radius:15px;
+    color:#00ff66;
+    font-family:monospace;
+    font-size:20px;
+    box-shadow:0 0 15px rgba(0,255,102,.15);
+}
+
+.card h3{
+    color:#00ff66;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#7f8c84;
+    font-size:14px;
+}
+
+/* =========================
+   FAKE LIVE SYSTEM
+========================= */
+
+.live-panel{
+    max-width:900px;
+    margin:70px auto 0;
+    padding:25px;
+    background:rgba(3,12,7,.9);
+    border:1px solid #124c2a;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(0,255,102,.08);
+}
+
+.live-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#00ff66;
+    font-family:monospace;
+    margin-bottom:22px;
+}
+
+.live-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#00ff66;
+    box-shadow:0 0 15px #00ff66;
+    animation:liveDot 1s infinite;
+}
+
+@keyframes liveDot{
+    50%{
+        opacity:.3;
+        transform:scale(.7);
+    }
+}
+
+/* VISITORS */
+
+.visitors{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    background:#050d08;
+    border-radius:12px;
+    margin-bottom:18px;
+}
+
+.visitor-number{
+    color:#00ff66;
+    font-size:28px;
+    font-family:monospace;
+    font-weight:bold;
+}
+
+.visitor-label{
+    color:#78857d;
+    font-size:13px;
+}
+
+/* AVATARS */
+
+.avatars{
+    display:flex;
+    align-items:center;
+}
+
+.avatar{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:2px solid #020504;
+    margin-left:-8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0d2b19;
+    color:#00ff66;
+    font-family:monospace;
+    font-size:12px;
+    box-shadow:0 0 10px rgba(0,255,102,.2);
+    animation:avatarFloat 2s ease-in-out infinite;
+}
+
+.avatar:first-child{
+    margin-left:0;
+}
+
+.avatar:nth-child(2){
+    animation-delay:.3s;
+}
+
+.avatar:nth-child(3){
+    animation-delay:.6s;
+}
+
+.avatar:nth-child(4){
+    animation-delay:.9s;
+}
+
+@keyframes avatarFloat{
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+/* ACTIVITY */
+
+.activity{
+    margin-top:20px;
+}
+
+.activity-item{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:12px 0;
+    border-bottom:1px solid #102518;
+    font-family:monospace;
+    font-size:12px;
+}
+
+.activity-user{
+    color:#00ff66;
+}
+
+.activity-action{
+    color:#78857d;
+}
+
+.activity-time{
+    color:#425148;
+}
+
+/* SERVICE PROGRESS */
+
+.progress-box{
+    max-width:900px;
+    margin:50px auto 0;
+}
+
+.progress-item{
+    margin-bottom:20px;
+}
+
+.progress-head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-family:monospace;
+    font-size:13px;
+}
+
+.progress-head span:first-child{
+    color:#aab6ae;
+}
+
+.progress-head span:last-child{
+    color:#00ff66;
+}
+
+.progress{
+    height:7px;
+    background:#0b1710;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid #12351f;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    background:#00ff66;
+    box-shadow:0 0 12px #00ff66;
+    animation:loadBar 2.5s forwards;
+}
+
+.web{
+    --target:85%;
+}
+
+.program{
+    --target:70%;
+}
+
+.cyber{
+    --target:60%;
+}
+
+@keyframes loadBar{
+    to{
+        width:var(--target);
+    }
+}
+
+/* STATUS */
+.status{
+    max-width:750px;
+    margin:50px auto 0;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    font-family:monospace;
+    color:#718077;
+    font-size:12px;
+}
+
+.status span{
+    color:#00ff66;
+}
+
+/* CONTACT */
+.contact{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact p{
+    color:#929e96;
+    font-size:17px;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:28px;
+    padding:16px 32px;
+    background:#00ff66;
+    color:#001b09;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(0,255,102,.3);
+    animation:whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse{
+    50%{
+        box-shadow:0 0 35px rgba(0,255,102,.7);
+    }
+}
+
+/* FOOTER */
+footer{
+    padding:25px;
+    text-align:center;
+    background:#000;
+    color:#526057;
+    border-top:1px solid #103b22;
+    font-family:monospace;
+    font-size:12px;
+}
+
+/* GENERAL */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pulse{
+    50%{
+        box-shadow:0 0 25px rgba(0,255,102,.35);
+    }
+}
+
+/* MOBILE */
+@media(max-width:750px){
+
+    nav{
+        justify-content:center;
+    }
+
+    .links{
+        display:none;
+    }
+
+    .hero{
+        padding-top:110px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    section{
+        padding:75px 5%;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .about-box{
+        padding:25px;
+    }
+
+    .terminal-body{
+        font-size:12px;
+    }
+
+    .activity-item{
+        flex-direction:column;
+        gap:4px;
+    }
+
+    .visitors{
+        gap:15px;
+    }
+
+    .status{
+        gap:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<!-- NAVIGATION -->
+<nav>
+
+    <div class="logo">T</div>
+
+    <div class="links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="badge">
+        ● SYSTEM ONLINE • TOP.FATMEYN
+    </div>
+
+    <h1 class="glitch" data-text="TOP.FATMEYN">
+        <span>TOP.FATMEYN</span>
+    </h1>
+
+    <p>
+        Technology • Web Development • Digital Creativity
+    </p>
+
+
+    <!-- TERMINAL -->
+
+    <div class="terminal">
+
+        <div class="terminal-header">
+            <span class="dot"></span>
+            top.fatmeyn@system:~$
+        </div>
+
+        <div class="terminal-body">
+            <span id="typing"></span>
+            <span class="cursor">█</span>
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <a href="#services" class="btn primary">
+            EXPLORE →
+        </a>
+
+        <a href="#contact" class="btn secondary">
+            CONTACT
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="section-title">
+
+    <h2>ABOUT ME</h2>
+
+    <p>Welcome to my digital space</p>
+
+</div>
+
+
+<div class="about-box">
+
+    <p>
+        Hello! I'm TOP.FATMEYN, a student passionate about
+        technology, websites, programming and digital
+        creativity. I'm learning new skills and building
+        digital projects step by step.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="section-title">
+
+    <h2>SERVICES</h2>
+
+    <p>Digital skills and projects</p>
+
+</div>
+
+
+<div class="services">
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            &lt;/&gt;
+        </div>
+
+        <h3>WEB DEV</h3>
+
+        <p>
+            Modern responsive websites using HTML,
+            CSS and JavaScript.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            &gt;_
+        </div>
+
+        <h3>PROGRAMMING</h3>
+
+        <p>
+            Learning programming concepts and
+            creating useful digital projects.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            [01]
+        </div>
+
+        <h3>CYBER LEARNING</h3>
+
+        <p>
+            Exploring cybersecurity through safe
+            and legal learning environments.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- SERVICE PROGRESS -->
+
+<div class="progress-box">
+
+    <div class="progress-item">
+
+        <div class="progress-head">
+            <span>WEB DEVELOPMENT</span>
+            <span>85%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill web"></div>
+        </div>
+
+    </div>
+
+
+    <div class="progress-item">
+
+        <div class="progress-head">
+            <span>PROGRAMMING</span>
+            <span>70%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill program"></div>
+        </div>
+
+    </div>
+
+
+    <div class="progress-item">
+
+        <div class="progress-head">
+            <span>CYBER LEARNING</span>
+            <span>60%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill cyber"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FAKE LIVE ACTIVITY -->
+
+<div class="live-panel">
+
+    <div class="live-title">
+
+        <span class="live-dot"></span>
+
+        LIVE ACTIVITY
+        <small style="color:#53635a;">
+            (DEMO)
+        </small>
+
+    </div>
+
+
+    <div class="visitors">
+
+        <div>
+
+            <div class="visitor-number" id="visitors">
+                127
+            </div>
+
+            <div class="visitor-label">
+                visitors online
+            </div>
+
+        </div>
+
+
+        <div class="avatars">
+
+            <div class="avatar">01</div>
+            <div class="avatar">02</div>
+            <div class="avatar">03</div>
+            <div class="avatar">04</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="activity" id="activity">
+
+        <div class="activity-item">
+
+            <span class="activity-user">
+                user_01
+            </span>
+
+            <span class="activity-action">
+                viewing services
+            </span>
+
+            <span class="activity-time">
+                now
+            </span>
+
+        </div>
+
+
+        <div class="activity-item">
+
+            <span class="activity-user">
+                visitor_27
+            </span>
+
+            <span class="activity-action">
+                opened portfolio
+            </span>
+
+            <span class="activity-time">
+                2s
+            </span>
+
+        </div>
+
+
+        <div class="activity-item">
+
+            <span class="activity-user">
+                guest_88
+            </span>
+
+            <span class="activity-action">
+                viewing about
+            </span>
+
+            <span class="activity-time">
+                5s
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- STATUS -->
+
+<div class="status">
+
+    <div>
+        STATUS:
+        <span>ONLINE</span>
+    </div>
+
+    <div>
+        MODE:
+        <span>LEARNING</span>
+    </div>
+
+    <div>
+        SYSTEM:
+        <span>ACTIVE</span>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="section-title">
+
+    <h2>CONTACT ME</h2>
+
+    <p>Let's connect</p>
+
+</div>
+
+
+<div class="contact">
+
+    <p>
+        Want to contact TOP.FATMEYN?
+        Send a message directly through WhatsApp.
+    </p>
+
+
+    <a
+        href="https://wa.me/255670675916"
+        target="_blank"
+        class="whatsapp">
+
+        💬 CHAT ON WHATSAPP
+
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 TOP.FATMEYN • CYBER PORTFOLIO
+
+</footer>
+
+
+<script>
+
+/* =================================
+   MATRIX RAIN
+================================= */
+
+const canvas =
+document.getElementById("matrix");
+
+const ctx =
+canvas.getContext("2d");
+
+let width =
+canvas.width =
+window.innerWidth;
+
+let height =
+canvas.height =
+window.innerHeight;
+
+const characters =
+"01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>[]{}#$%&";
+
+const fontSize = 14;
+
+let columns =
+Math.floor(width / fontSize);
+
+let drops =
+Array(columns).fill(1);
+
+
+function drawMatrix(){
+
+    ctx.fillStyle =
+    "rgba(0,0,0,0.07)";
+
+    ctx.fillRect(
+        0,
+        0,
+        width,
+        height
+    );
+
+    ctx.fillStyle =
+    "#00ff66";
+
+    ctx.font =
+    fontSize + "px monospace";
+
+
+    for(
+        let i = 0;
+        i < drops.length;
+        i++
+    ){
+
+        const text =
+        characters[
+            Math.floor(
+                Math.random() *
+                characters.length
+            )
+        ];
+
+
+        ctx.fillText(
+            text,
+            i * fontSize,
+            drops[i] * fontSize
+        );
+
+
+        if(
+            drops[i] * fontSize > height &&
+            Math.random() > .975
+        ){
+
+            drops[i] = 0;
+
+        }
+
+        drops[i]++;
+
+    }
+
+}
+
+
+setInterval(
+    drawMatrix,
+    35
+);
+
+
+/* =================================
+   TERMINAL TYPING
+================================= */
+
+const messages = [
+
+    "> Initializing TOP.FATMEYN...",
+    "> Loading digital interface...",
+    "> Scanning portfolio modules...",
+    "> Security status: SAFE",
+    "> System ready...",
+    "> Welcome to TOP.FATMEYN"
+
+];
+
+let messageIndex = 0;
+
+let characterIndex = 0;
+
+const typing =
+document.getElementById("typing");
+
+
+function typeText(){
+
+    if(
+        characterIndex <
+        messages[messageIndex].length
+    ){
+
+        typing.textContent +=
+        messages[messageIndex]
+        .charAt(characterIndex);
+
+        characterIndex++;
+
+        setTimeout(
+            typeText,
+            45
+        );
+
+    }else{
+
+        setTimeout(
+            eraseText,
+            1800
+        );
+
+    }
+
+}
+
+
+function eraseText(){
+
+    if(characterIndex > 0){
+
+        typing.textContent =
+        messages[messageIndex]
+        .substring(
+            0,
+            characterIndex - 1
+        );
+
+        characterIndex--;
+
+        setTimeout(
+            eraseText,
+            25
+        );
+
+    }else{
+
+        messageIndex =
+        (messageIndex + 1)
+        % messages.length;
+
+        setTimeout(
+            typeText,
+            400
+        );
+
+    }
+
+}
+
+
+typeText();
+
+
+/* =================================
+   FAKE VISITOR COUNTER
+================================= */
+
+const visitorElement =
+document.getElementById("visitors");
+
+let visitorCount = 127;
+
+setInterval(function(){
+
+    const change =
+    Math.floor(
+        Math.random() * 7
+    ) - 3;
+
+    visitorCount += change;
+
+    if(visitorCount < 90){
+        visitorCount = 90;
+    }
+
+    if(visitorCount > 180){
+        visitorCount = 180;
+    }
+
+    visitorElement.textContent =
+    visitorCount;
+
+},2500);
+
+
+/* =================================
+   FAKE LIVE ACTIVITY
+================================= */
+
+const users = [
+    "guest_12",
+    "visitor_44",
+    "user_77",
+    "guest_91",
+    "visitor_08",
+    "user_32"
+];
+
+const actions = [
+    "viewing services",
+    "opened portfolio",
+    "viewing about",
+    "checking contact",
+    "exploring website"
+];
+
+const activity =
+document.getElementById("activity");
+
+
+setInterval(function(){
+
+    const user =
+    users[
+        Math.floor(
+            Math.random() *
+            users.length
+        )
+    ];
+
+    const action =
+    actions[
+        Math.floor(
+            Math.random() *
+            actions.length
+        )
+    ];
+
+
+    const item =
+    document.createElement("div");
+
+    item.className =
+    "activity-item";
+
+    item.innerHTML = `
+
+        <span class="activity-user">
+            ${user}
+        </span>
+
+        <span class="activity-action">
+            ${action}
+        </span>
+
+        <span class="activity-time">
+            now
+        </span>
+
+    `;
+
+
+    activity.prepend(item);
+
+
+    if(activity.children.length > 5){
+
+        activity.removeChild(
+            activity.lastElementChild
+        );
+
+    }
+
+},3500);
+
+
+/* =================================
+   RESIZE MATRIX
+================================= */
+
+window.addEventListener(
+"resize",
+function(){
+
+    width =
+    canvas.width =
+    window.innerWidth;
+
+    height =
+    canvas.height =
+    window.innerHeight;
+
+    columns =
+    Math.floor(
+        width / fontSize
+    );
+
+    drops =
+    Array(columns).fill(1);
+
+});
+
+</script>
+
+</body>
+</html>
