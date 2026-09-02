@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="TOP.FATMEYN — a premium interactive technology learning space.">
+<title>TOP.FATMEYN — Digital Learning</title>
+<style>
+:root{--bg:#030605;--panel:#08110c;--panel2:#0b1710;--g:#48ff7f;--g2:#a6ffc0;--white:#f4fff7;--muted:#91a99a;--line:#173c25;--danger:#ff7185}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(72,255,127,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(72,255,127,.025) 1px,transparent 1px);background-size:45px 45px;pointer-events:none;z-index:-2}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.p{position:absolute;width:3px;height:3px;background:var(--g);border-radius:50%;opacity:.35;animation:float 8s linear infinite}
+@keyframes float{0%{transform:translateY(105vh);opacity:0}15%{opacity:.45}85%{opacity:.25}100%{transform:translateY(-10vh);opacity:0}}
+header{position:sticky;top:0;z-index:50;background:rgba(3,6,5,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(72,255,127,.14)}
+nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:950;letter-spacing:2px;color:var(--g);text-shadow:0 0 18px rgba(72,255,127,.3)}
+nav a{color:#d9ffe3;text-decoration:none;font-size:13px;margin-left:16px}
+nav a:hover{color:var(--g)}
+.hero{min-height:94vh;display:grid;place-items:center;text-align:center;padding:80px 20px;position:relative}
+.hero-inner{max-width:900px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid #235b34;border-radius:30px;background:rgba(72,255,127,.04);font:12px monospace;color:var(--g2);margin-bottom:20px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 15px var(--g);animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25;transform:scale(.75)}}
+.profile{width:185px;height:185px;object-fit:cover;border-radius:50%;border:3px solid var(--g);padding:5px;background:#061009;box-shadow:0 0 25px rgba(72,255,127,.55),0 0 90px rgba(72,255,127,.13);animation:orb 4s ease-in-out infinite}
+@keyframes orb{50%{transform:translateY(-7px);box-shadow:0 0 35px rgba(72,255,127,.7),0 0 100px rgba(72,255,127,.18)}}
+h1{font-size:clamp(44px,10vw,92px);line-height:.95;letter-spacing:6px;color:var(--g);margin:25px 0 15px;text-shadow:0 0 25px rgba(72,255,127,.35)}
+.hero h2{font-size:clamp(18px,4vw,29px);font-weight:500;color:var(--g2);min-height:44px}
+.hero p{max-width:720px;margin:16px auto;color:var(--muted)}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{border-radius:11px;padding:12px 19px;text-decoration:none;font-weight:800;display:inline-block;transition:.25s;border:1px solid var(--g)}
+.primary{background:var(--g);color:#031007;box-shadow:0 0 24px rgba(72,255,127,.16)}
+.secondary{color:var(--g2);background:rgba(72,255,127,.04)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(72,255,127,.16)}
+.stats{max-width:900px;margin:38px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{border:1px solid var(--line);background:rgba(7,17,11,.65);border-radius:13px;padding:13px}
+.stat b{display:block;color:var(--g);font-size:21px}.stat span{font-size:11px;color:var(--muted)}
+section{max-width:1200px;margin:auto;padding:90px 20px}
+.kicker{font:12px monospace;letter-spacing:2px;color:var(--g);margin-bottom:8px}
+.title{font-size:clamp(29px,5vw,43px);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,rgba(10,25,15,.94),rgba(5,12,8,.96));border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 18px 45px rgba(0,0,0,.22);transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:#2e9c50;box-shadow:0 22px 55px rgba(0,0,0,.35),0 0 30px rgba(72,255,127,.06)}
+.icon{font-size:28px;margin-bottom:10px}.card h3{color:var(--g2);margin-bottom:8px}.card p{color:var(--muted)}
+.skill{margin-top:16px}.skill-top{display:flex;justify-content:space-between;font-size:12px;color:#c8e8d0}.bar{height:7px;background:#122017;border-radius:20px;overflow:hidden;margin-top:7px}.bar i{display:block;height:100%;background:var(--g);border-radius:20px;animation:grow 1.8s ease}
+@keyframes grow{from{width:0}}
+.service-tag{display:inline-block;margin-top:15px;padding:5px 9px;border-radius:20px;background:rgba(72,255,127,.07);color:var(--g2);font-size:11px}
+.learn-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.lesson-list{display:grid;gap:12px}
+.lesson{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:13px;background:rgba(7,17,11,.55)}
+.num{min-width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:rgba(72,255,127,.1);border:1px solid #28623a;color:var(--g)}
+.lesson h4{color:var(--g2)}.lesson p{font-size:13px;color:var(--muted)}
+.code{background:#010301;border:1px solid #12351e;border-radius:10px;padding:15px;margin-top:12px;font:13px monospace;color:#a7ffbd;overflow:auto}
+.exercise{position:relative}.difficulty{position:absolute;right:18px;top:18px;font-size:10px;color:var(--g);border:1px solid #245b35;border-radius:20px;padding:4px 7px}
+.exercise p{font-size:14px}.exercise button,.quiz button{margin-top:13px;padding:9px 12px;border:1px solid #2a8143;border-radius:8px;background:#071008;color:#caffd6;cursor:pointer}
+.exercise button:hover,.quiz button:hover{background:#12391c}
+.done{opacity:.65;border-color:#27683a}.done button{color:var(--g)}
+.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.progress-box{margin-top:25px;padding:20px;border:1px solid var(--line);border-radius:15px;background:#050b07}
+.progress-line{height:10px;background:#122017;border-radius:20px;overflow:hidden;margin:10px 0}.progress-line span{display:block;height:100%;width:0;background:var(--g);transition:.5s}
+.timer{text-align:center}.time{font:700 clamp(38px,9vw,65px) monospace;color:var(--g);margin:10px}.timer button{padding:10px 14px;margin:4px;border:1px solid #2a8143;border-radius:8px;background:#071008;color:#d5ffdf}
+.activity{font:13px monospace;background:#010301;border:1px solid var(--line);border-radius:15px;padding:20px;color:#83ff9f}.activity div{margin:9px 0}
+.feed{height:145px;overflow:hidden}.feed div{animation:feed 7s linear infinite}@keyframes feed{0%{transform:translateY(120px);opacity:0}15%,75%{opacity:1}100%{transform:translateY(-100px);opacity:0}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+footer{text-align:center;padding:45px 20px;border-top:1px solid rgba(72,255,127,.13);color:#708777}
+.small{font-size:11px;color:#66806e}
+#top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:1px solid var(--g);background:#071008;color:var(--g);z-index:30}
+@media(max-width:850px){.grid,.challenge-grid,.contact,.learn-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}nav{align-items:flex-start;gap:10px}nav div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end}nav a{margin-left:8px}.profile{width:155px;height:155px}}
+@media(max-width:520px){.stats{grid-template-columns:1fr}.hero{padding-top:55px}}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<header><nav>
+<div class="brand">TOP.FATMEYN</div>
+<div>
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#learn">Learn</a><a href="#practice">Practice</a><a href="#contact">Contact</a>
+</div>
+</nav></header>
+
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="badge"><span class="live-dot"></span> DIGITAL LEARNING SPACE • ONLINE</div>
+<img class="profile" src="236704.png" alt="TOP.FATMEYN profile photo">
+<h1>TOP.FATMEYN</h1>
+<h2 id="typing">Technology • Creativity • Learning</h2>
+<p>Explore technology, build real projects, practice your skills and learn at your own pace — all in one interactive digital space.</p>
+<div class="buttons"><a class="btn primary" href="#learn">Start Learning →</a><a class="btn secondary" href="https://wa.me/255670675916" target="_blank" rel="noopener">💬 Connect on WhatsApp</a></div>
+<div class="stats"><div class="stat"><b id="lessonsStat">20+</b><span>Learning topics</span></div><div class="stat"><b>24/7</b><span>Practice access</span></div><div class="stat"><b id="doneStat">0</b><span>Challenges completed</span></div></div>
+</div></section>
+
+<section id="about"><div class="kicker">01 / THE VISION</div><h2 class="title">A Space Built to Learn & Create</h2>
+<div class="grid"><div class="card"><div class="icon">🚀</div><h3>Build</h3><p>Turn ideas into webpages and digital projects while learning the fundamentals behind them.</p></div><div class="card"><div class="icon">🧠</div><h3>Understand</h3><p>Learn difficult technology concepts through simple explanations and practical examples.</p></div><div class="card"><div class="icon">🌍</div><h3>Grow</h3><p>Practice consistently, track your progress and keep developing your digital skills.</p></div></div>
+</section>
+
+<section id="services"><div class="kicker">02 / SERVICES</div><h2 class="title">What TOP.FATMEYN Offers</h2>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Web Design</h3><p>Responsive personal pages, landing pages and beginner projects.</p><span class="service-tag">HTML • CSS • JS</span><div class="skill"><div class="skill-top"><span>Current focus</span><span>88%</span></div><div class="bar"><i style="width:88%"></i></div></div></div>
+<div class="card"><div class="icon">📚</div><h3>Learning Hub</h3><p>Structured lessons, examples and challenges for beginners.</p><span class="service-tag">LEARN • PRACTICE</span><div class="skill"><div class="skill-top"><span>Learning library</span><span>92%</span></div><div class="bar"><i style="width:92%"></i></div></div></div>
+<div class="card"><div class="icon">💡</div><h3>Digital Projects</h3><p>Explore ideas, experiment with code and create useful web experiences.</p><span class="service-tag">BUILD • EXPLORE</span><div class="skill"><div class="skill-top"><span>Project mode</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div></div>
+</div></section>
+
+<section id="learn"><div class="kicker">03 / LEARNING HUB</div><h2 class="title">Learn Step by Step</h2>
+<div class="learn-grid"><div class="card"><div class="lesson-list">
+<div class="lesson"><span class="num">01</span><div><h4>HTML — Structure</h4><p>Learn headings, paragraphs, links, images, buttons and page sections.</p></div></div>
+<div class="lesson"><span class="num">02</span><div><h4>CSS — Design</h4><p>Learn colors, spacing, layouts, responsive design and animations.</p></div></div>
+<div class="lesson"><span class="num">03</span><div><h4>JavaScript — Interaction</h4><p>Learn variables, buttons, events and simple dynamic webpage behavior.</p></div></div>
+<div class="lesson"><span class="num">04</span><div><h4>GitHub — Publish</h4><p>Learn how repositories and GitHub Pages can put your website online.</p></div></div>
+</div></div>
+<div class="card"><h3>🌍 What Is a Browser?</h3><p>A browser is an application that lets you open and interact with websites on the internet. Chrome, Firefox, Edge and Safari are examples.</p><div class="code">You → Browser → Website → Screen</div><p style="margin-top:12px">The browser requests the website and displays its text, images, buttons and other content.</p></div></div>
+</section>
+
+<section id="practice"><div class="kicker">04 / PRACTICE LAB</div><h2 class="title">Interactive Challenges</h2>
+<div class="challenge-grid">
+<div class="card exercise" data-id="1"><span class="difficulty">BEGINNER</span><h3>Challenge 01</h3><p>Create an HTML heading using <b>&lt;h1&gt;</b>. Think about what belongs inside the opening and closing tags.</p><button onclick="complete(this,1)">Mark Complete</button></div>
+<div class="card exercise" data-id="2"><span class="difficulty">BEGINNER</span><h3>Challenge 02</h3><p>Which CSS property changes the background color of an element?</p><button onclick="complete(this,2)">I Know It</button></div>
+<div class="card exercise" data-id="3"><span class="difficulty">INTERMEDIATE</span><h3>Challenge 03</h3><p>Add a link to a webpage using the HTML anchor element. Remember the <b>href</b> attribute.</p><button onclick="complete(this,3)">Mark Complete</button></div>
+<div class="card exercise" data-id="4"><span class="difficulty">INTERMEDIATE</span><h3>Challenge 04</h3><p>Make a page mobile-friendly. What CSS tool helps you apply styles at different screen sizes?</p><button onclick="complete(this,4)">I Know It</button></div>
+<div class="card exercise" data-id="5"><span class="difficulty">ADVANCED</span><h3>Challenge 05</h3><p>Create a small JavaScript button that changes text on the page when clicked.</p><button onclick="complete(this,5)">Mark Complete</button></div>
+<div class="card exercise" data-id="6"><span class="difficulty">ADVANCED</span><h3>Challenge 06</h3><p>Publish a project with GitHub Pages and test it on your phone.</p><button onclick="complete(this,6)">Mark Complete</button></div>
+</div>
+<div class="progress-box"><b>Learning Progress</b><div class="progress-line"><span id="progress"></span></div><span id="progressText" class="small">0 of 6 challenges completed</span></div>
+</section>
+
+<section><div class="kicker">05 / FOCUS MODE</div><h2 class="title">Practice Timer</h2><div class="card timer"><p>Use this timer for a focused coding or study session.</p><div class="time" id="time">25:00</div><button onclick="startTimer()">Start</button><button onclick="pauseTimer()">Pause</button><button onclick="resetTimer()">Reset</button></div></section>
+
+<section><div class="kicker">06 / LIVE DEMO</div><h2 class="title">Digital Activity</h2><div class="activity"><div>&gt; system: TOP.FATMEYN online ✓</div><div>&gt; connection: stable ✓</div><div>&gt; visitors: <span id="visitors">27</span> <span class="small">(DEMO)</span></div><div class="feed"><div>&gt; learner joined the practice lab...</div><div>&gt; challenge progress updated...</div><div>&gt; new learning session detected...</div></div></div></section>
+
+<section id="contact"><div class="kicker">07 / CONNECT</div><h2 class="title">Let's Connect</h2><div class="contact"><div class="card"><div class="icon">💬</div><h3>WhatsApp</h3><p>Questions, ideas or digital project conversations.</p><div class="buttons" style="justify-content:flex-start"><a class="btn primary" href="https://wa.me/255670675916" target="_blank" rel="noopener">Message Me</a></div></div><div class="card"><div class="icon">🎯</div><h3>Keep Learning</h3><p>Come back anytime, practice a challenge and continue building your skills.</p></div></div></section>
+</main>
+
+<footer>© <span id="year"></span> TOP.FATMEYN • Digital Learning Space<br><span class="small">Live visitor numbers and activity messages are visual demo animations, not real analytics.</span></footer>
+<button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+for(let i=0;i<28;i++){let p=document.createElement("i");p.className="p";p.style.left=Math.random()*100+"%";p.style.animationDelay=Math.random()*8+"s";p.style.animationDuration=5+Math.random()*7+"s";document.getElementById("particles").appendChild(p)}
+const lines=["Technology • Creativity • Learning","Build ideas. Practice skills. Keep growing.","Your digital learning journey starts here."];
+let x=0,y=0,del=false;const typing=document.getElementById("typing");
+function type(){let t=lines[x];typing.textContent=del?t.slice(0,y--):t.slice(0,y++);if(!del&&y>t.length){del=true;return setTimeout(type,1200)}if(del&&y<0){del=false;x=(x+1)%lines.length;y=0}setTimeout(type,del?35:60)}type();
+
+let completed=JSON.parse(localStorage.getItem("topFatmeynChallenges")||"[]");
+function render(){document.querySelectorAll(".exercise").forEach(c=>{let id=+c.dataset.id;if(completed.includes(id)){c.classList.add("done");c.querySelector("button").textContent="✓ Completed"}});let n=completed.length;document.getElementById("doneStat").textContent=n;document.getElementById("progress").style.width=(n/6*100)+"%";document.getElementById("progressText").textContent=n+" of 6 challenges completed"} 
+function complete(btn,id){if(!completed.includes(id)){completed.push(id);localStorage.setItem("topFatmeynChallenges",JSON.stringify(completed));render()}else{completed=completed.filter(x=>x!==id);localStorage.setItem("topFatmeynChallenges",JSON.stringify(completed));render()}}
+render();
+
+let seconds=1500,timer=null;
+function drawTime(){let m=String(Math.floor(seconds/60)).padStart(2,"0"),s=String(seconds%60).padStart(2,"0");document.getElementById("time").textContent=m+":"+s}
+function startTimer(){if(timer)return;timer=setInterval(()=>{if(seconds>0){seconds--;drawTime()}else{clearInterval(timer);timer=null;alert("Session complete! Great work.")}},1000)}
+function pauseTimer(){clearInterval(timer);timer=null}
+function resetTimer(){pauseTimer();seconds=1500;drawTime()}
+let visitors=27;setInterval(()=>{if(Math.random()>.58)visitors++;document.getElementById("visitors").textContent=visitors},3200);
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
