@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TOP.FATMEYN — technology, web design and beginner-friendly digital learning.">
+<title>TOP.FATMEYN | Digital Creator</title>
+<style>
+:root{--bg:#030604;--panel:#07110a;--green:#43ff7a;--green2:#9affb7;--text:#effff3;--muted:#9bb2a1;--line:#174b29}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(34,255,104,.12),transparent 28%),var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(rgba(67,255,122,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(67,255,122,.025) 1px,transparent 1px);background-size:42px 42px;pointer-events:none;z-index:-1}
+header{position:sticky;top:0;z-index:20;background:rgba(3,6,4,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(67,255,122,.18)}
+nav{max-width:1150px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+.brand{font-weight:900;letter-spacing:2px;color:var(--green);font-size:18px}
+nav a{color:#d9ffe3;text-decoration:none;margin-left:18px;font-size:13px;transition:.2s}
+nav a:hover{color:var(--green)}
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;position:relative}
+.hero:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(67,255,122,.12);box-shadow:0 0 100px rgba(67,255,122,.08);z-index:-1}
+.hero-inner{max-width:850px}
+.status{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(67,255,122,.05);color:var(--green2);padding:7px 13px;border-radius:30px;font-size:12px;margin-bottom:22px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+.profile{width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid var(--green);padding:5px;background:#061009;box-shadow:0 0 20px rgba(67,255,122,.55),0 0 70px rgba(67,255,122,.18);margin-bottom:24px}
+h1{font-size:clamp(42px,10vw,86px);line-height:1;letter-spacing:5px;color:var(--green);text-shadow:0 0 22px rgba(67,255,122,.3);margin-bottom:18px}
+.hero h2{font-size:clamp(18px,4vw,28px);font-weight:500;color:var(--green2)}
+.hero p{max-width:680px;margin:16px auto;color:var(--muted);font-size:16px}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;padding:12px 19px;border-radius:10px;border:1px solid var(--green);font-weight:800;transition:.25s}
+.btn.primary{background:var(--green);color:#031006;box-shadow:0 0 25px rgba(67,255,122,.18)}
+.btn.secondary{color:var(--green2);background:rgba(67,255,122,.04)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(67,255,122,.16)}
+section{max-width:1150px;margin:auto;padding:85px 20px}
+.section-kicker{color:var(--green);font-family:monospace;font-size:12px;letter-spacing:2px;margin-bottom:8px}
+.title{font-size:clamp(28px,5vw,42px);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,rgba(10,25,14,.9),rgba(5,12,7,.92));border:1px solid var(--line);border-radius:18px;padding:25px;transition:.3s;box-shadow:0 15px 40px rgba(0,0,0,.2)}
+.card:hover{transform:translateY(-6px);border-color:#2cae55;box-shadow:0 20px 45px rgba(0,0,0,.35),0 0 25px rgba(67,255,122,.07)}
+.card h3{color:var(--green2);font-size:20px;margin-bottom:9px}
+.card p{color:var(--muted)}
+.icon{font-size:26px;margin-bottom:12px}
+.progress{height:8px;background:#122118;border-radius:20px;margin-top:18px;overflow:hidden}
+.progress span{display:block;height:100%;background:var(--green);border-radius:20px;box-shadow:0 0 12px rgba(67,255,122,.5)}
+.lesson{padding:13px 0;border-bottom:1px solid rgba(67,255,122,.1)}
+.lesson:last-child{border-bottom:0}
+.lesson strong{color:var(--green2)}
+.code{background:#010301;border:1px solid #12351e;border-radius:10px;padding:15px;margin-top:12px;font-family:monospace;color:#a7ffbd;overflow:auto}
+.activity{font-family:monospace;background:#010301;border:1px solid var(--line);border-radius:14px;padding:20px;color:#83ff9f}
+.activity div{margin:8px 0}
+.quiz button{margin:7px 4px;padding:10px 14px;border:1px solid #25763c;background:#071008;color:#c9ffd5;border-radius:8px;cursor:pointer}
+.quiz button:hover{background:#12351c}
+footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(67,255,122,.15);color:#6f8876}
+.small{font-size:12px;color:#6f8876}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.profile{width:150px;height:150px}nav{align-items:flex-start;gap:10px}nav div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end}nav a{margin-left:9px}.hero{min-height:86vh}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="brand">TOP.FATMEYN</div>
+<div>
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#learn">Learn</a><a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<div class="status"><span class="dot"></span> DIGITAL SPACE • ONLINE</div>
+<img src="236704.png" alt="TOP.FATMEYN profile" class="profile">
+<h1>TOP.FATMEYN</h1>
+<h2 id="typing">Technology • Creativity • Learning</h2>
+<p>Welcome to my digital space — a place for technology, web projects and simple lessons designed to help beginners learn with confidence.</p>
+<div class="buttons">
+<a class="btn primary" href="#learn">Explore Learning</a>
+<a class="btn secondary" href="https://wa.me/255670675916" target="_blank" rel="noopener">💬 WhatsApp</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="section-kicker">01 / PROFILE</div>
+<h2 class="title">About Me</h2>
+<div class="card">
+<h3>Welcome 👋</h3>
+<p>TOP.FATMEYN is a personal digital space focused on technology, creativity and continuous learning. I enjoy exploring how websites and digital tools work, building projects and sharing beginner-friendly knowledge.</p>
+<p style="margin-top:12px">The mission is simple: <strong style="color:var(--green2)">learn • build • share • improve.</strong></p>
+</div>
+</section>
+
+<section id="services">
+<div class="section-kicker">02 / WHAT I DO</div>
+<h2 class="title">Services & Skills</h2>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Web Design</h3><p>Clean and responsive websites built with modern HTML, CSS and JavaScript.</p><div class="progress"><span style="width:88%"></span></div></div>
+<div class="card"><div class="icon">💻</div><h3>Technology</h3><p>Simple explanations of digital concepts for people who are just getting started.</p><div class="progress"><span style="width:78%"></span></div></div>
+<div class="card"><div class="icon">📚</div><h3>Beginner Learning</h3><p>Practical exercises and step-by-step guidance for learning web development.</p><div class="progress"><span style="width:92%"></span></div></div>
+</div>
+</section>
+
+<section id="learn">
+<div class="section-kicker">03 / LEARNING HUB</div>
+<h2 class="title">Start Learning</h2>
+<div class="grid">
+<div class="card"><div class="icon">🏗️</div><h3>HTML</h3><p>HTML provides the structure of a webpage.</p><div class="code">&lt;h1&gt;Hello World&lt;/h1&gt;</div></div>
+<div class="card"><div class="icon">🎨</div><h3>CSS</h3><p>CSS controls the appearance, layout and visual design.</p><div class="code">body { background: #030604; }</div></div>
+<div class="card"><div class="icon">⚡</div><h3>JavaScript</h3><p>JavaScript adds interaction and dynamic behavior.</p><div class="code">alert("Hello!");</div></div>
+</div>
+
+<div class="card" style="margin-top:18px">
+<h3>🌍 What Is a Browser?</h3>
+<p>A web browser is an application that lets you access and interact with websites on the internet. Chrome, Firefox, Edge and Safari are examples of web browsers.</p>
+<p style="margin-top:10px">When you enter a website address, the browser requests the website and displays its text, images, buttons and other content.</p>
+</div>
+
+<div class="card" style="margin-top:18px">
+<h3>🧪 Beginner Challenges</h3>
+<div class="lesson"><strong>Challenge 01:</strong> Create an HTML page with your name as the main heading.</div>
+<div class="lesson"><strong>Challenge 02:</strong> Use CSS to change the page background and text style.</div>
+<div class="lesson"><strong>Challenge 03:</strong> Add a button that opens a WhatsApp conversation.</div>
+<div class="lesson"><strong>Challenge 04:</strong> Create a GitHub repository and publish your webpage with GitHub Pages.</div>
+</div>
+
+<div class="card quiz" style="margin-top:18px">
+<h3>⚡ Quick Quiz</h3>
+<p>Which technology controls the visual style of a webpage?</p>
+<button onclick="answer(false)">HTML</button><button onclick="answer(true)">CSS</button><button onclick="answer(false)">GitHub</button>
+<p id="result" style="margin-top:10px;color:var(--green2)"></p>
+</div>
+</section>
+
+<section id="activity">
+<div class="section-kicker">04 / SYSTEM</div>
+<h2 class="title">Live Activity</h2>
+<div class="activity">
+<div>&gt; system: TOP.FATMEYN is active</div>
+<div>&gt; visitors: <span id="visitors">27</span> <span class="small">(DEMO)</span></div>
+<div>&gt; mode: learning enabled</div>
+<div>&gt; connection: stable ✓</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-kicker">05 / CONNECT</div>
+<h2 class="title">Contact</h2>
+<div class="card">
+<h3>Let's Connect 🤝</h3>
+<p>Have a question, want to learn together, or want to talk about a digital project? Send me a message on WhatsApp.</p>
+<div class="buttons" style="justify-content:flex-start">
+<a class="btn primary" href="https://wa.me/255670675916" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> TOP.FATMEYN • Built with HTML, CSS & JavaScript<br><span class="small">The visitor counter is a visual demo, not real analytics.</span></footer>
+
+<script>
+const lines=["Technology • Creativity • Learning","Build your ideas. Learn new skills.","Welcome to TOP.FATMEYN."];
+let a=0,b=0,del=false;
+const el=document.getElementById("typing");
+function type(){const t=lines[a];el.textContent=del?t.slice(0,b--):t.slice(0,b++);if(!del&&b>t.length){del=true;return setTimeout(type,1200)}if(del&&b<0){del=false;a=(a+1)%lines.length;b=0}setTimeout(type,del?35:60)}
+type();
+function answer(ok){document.getElementById("result").textContent=ok?"✓ Correct! CSS controls visual styling.":"✕ Try again — think about styling and design."}
+let v=27;setInterval(()=>{if(Math.random()>.6)v++;document.getElementById("visitors").textContent=v},3500);
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
