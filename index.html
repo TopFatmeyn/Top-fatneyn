@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TOP.FATMEYN | Digital Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">TOP.FATMEYN <span>/ Digital Platform</span></div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+    <a href="#programs">Programs</a><a href="#news">News</a><a href="#apply">Apply</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">DIGITAL PLATFORM • ONLINE</p>
+    <h1>Learn. Create.<br><strong>Move Forward.</strong></h1>
+    <p class="lead">TOP.FATMEYN is a growing professional digital platform for technology, practical projects, useful resources and future opportunities.</p>
+    <div class="actions"><a class="btn primary" href="#services">Explore Platform</a><a class="btn light" href="#about">Discover More →</a></div>
+    <div class="checks"><span>✓ Practical</span><span>✓ Mobile friendly</span><span>✓ Growing platform</span></div>
+  </div>
+  <div class="status-card"><small>PLATFORM STATUS</small><b>● ONLINE</b><p>Building the next stage of TOP.FATMEYN.</p></div>
+</section>
+
+<section id="about" class="section">
+  <p class="eyebrow">ABOUT</p><h2>A platform built for progress.</h2>
+  <p class="section-text">Our goal is to create a clean digital space where people can discover technology, build practical skills, explore projects and access useful opportunities.</p>
+  <div class="stats"><div><b>24/7</b><span>Digital access</span></div><div><b>6+</b><span>Core areas</span></div><div><b>100%</b><span>Growth focused</span></div></div>
+</section>
+
+<section id="services" class="section alt">
+  <p class="eyebrow">SERVICES</p><h2>What you can explore</h2>
+  <div class="grid">
+    <article class="card" data-title="Digital Resources" data-text="Useful digital resources, guides and tools can be organized here as the platform grows."><span>01</span><h3>Digital Resources</h3><p>Useful tools, guides and resources.</p></article>
+    <article class="card" data-title="Project Building" data-text="A practical area for creating and presenting websites, digital projects and experiments."><span>02</span><h3>Project Building</h3><p>Build and showcase practical projects.</p></article>
+    <article class="card" data-title="Technology Support" data-text="A future support area for technology questions, setup guidance and digital problem solving."><span>03</span><h3>Technology Support</h3><p>Guidance for digital challenges.</p></article>
+  </div>
+</section>
+
+<section id="programs" class="section">
+  <p class="eyebrow">PROGRAMS</p><h2>Areas to grow your skills</h2>
+  <div class="grid">
+    <article class="card" data-title="Web Development" data-text="Learn the foundations of modern websites and practical front-end projects."><h3>Web Development</h3><p>Websites and practical coding.</p></article>
+    <article class="card" data-title="AI & Automation" data-text="Explore responsible AI tools, automation ideas and practical digital workflows."><h3>AI & Automation</h3><p>AI tools and smart workflows.</p></article>
+    <article class="card" data-title="Cyber & Digital Skills" data-text="Build foundational digital safety and technology skills."><h3>Cyber & Digital Skills</h3><p>Digital skills and awareness.</p></article>
+  </div>
+</section>
+
+<section id="account" class="section alt">
+  <p class="eyebrow">MY SPACE</p><h2>Account & application tracker</h2>
+  <div class="account-box">
+    <div><h3>Demo dashboard</h3><p>Your future dashboard can hold applications, courses, certificates, profile details and notifications.</p></div>
+    <button class="btn primary" id="demoLogin">Open Demo Account</button>
+  </div>
+  <div id="dashboard" class="dashboard hidden">
+    <div><b>STATUS</b><span>Active demo profile</span></div>
+    <div><b>APPLICATION</b><span id="appStatus">No application saved</span></div>
+    <div><b>COURSES</b><span>Coming in the next stage</span></div>
+  </div>
+</section>
+
+<section id="news" class="section">
+  <p class="eyebrow">NEWS & UPDATES</p><h2>Latest platform updates</h2>
+  <div class="grid"><article class="news"><small>UPDATE</small><h3>TOP.FATMEYN is growing</h3><p>New platform sections and future digital services are being developed.</p></article>
+  <article class="news"><small>ROADMAP</small><h3>Accounts & Certificates</h3><p>Architecture is being prepared for future user accounts and certificates.</p></article></div>
+</section>
+
+<section id="apply" class="section apply">
+  <p class="eyebrow">APPLICATIONS</p><h2>Send a request</h2>
+  <form id="applyForm">
+    <input id="name" required placeholder="Your name">
+    <select id="interest" required><option value="">Choose an area</option><option>Web & Software</option><option>AI & Automation</option><option>Cyber & Digital Skills</option><option>Creative Technology</option><option>Digital Resources</option><option>General enquiry</option></select>
+    <textarea id="message" required placeholder="Write your request"></textarea>
+    <button class="btn primary" type="submit">Send via WhatsApp</button>
+    <p class="form-note">Your request opens in WhatsApp. A full online submission system can be connected later.</p>
+  </form>
+</section>
+
+<section id="contact" class="section contact">
+  <p class="eyebrow">CONTACT</p><h2>Stay connected</h2>
+  <div class="contact-links"><a href="https://wa.me/255670675916">WhatsApp</a><a href="https://www.tiktok.com/@____yk4x">TikTok</a><a href="https://www.instagram.com/____yk4x">Instagram</a></div>
+</section>
+</main>
+
+<footer>© 2026 TOP.FATMEYN — Digital Platform</footer>
+
+<div class="modal hidden" id="modal"><div class="modal-box"><button id="closeModal">×</button><h2 id="modalTitle"></h2><p id="modalText"></p><button class="btn primary" id="modalAction">Close</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const nav=$("#nav"), menu=$("#menuBtn");
+menu.onclick=()=>nav.classList.toggle("open");
+document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+
+const modal=$("#modal");
+document.querySelectorAll(".card").forEach(c=>c.onclick=()=>{
+  $("#modalTitle").textContent=c.dataset.title||c.querySelector("h3").textContent;
+  $("#modalText").textContent=c.dataset.text||c.querySelector("p").textContent;
+  modal.classList.remove("hidden");
+});
+$("#closeModal").onclick=()=>modal.classList.add("hidden");
+$("#modalAction").onclick=()=>modal.classList.add("hidden");
+modal.onclick=e=>{if(e.target===modal)modal.classList.add("hidden")};
+
+$("#demoLogin").onclick=()=>{
+  $("#dashboard").classList.toggle("hidden");
+  $("#demoLogin").textContent=$("#dashboard").classList.contains("hidden")?"Open Demo Account":"Close Demo Account";
+};
+
+$("#applyForm").onsubmit=e=>{
+  e.preventDefault();
+  const name=$("#name").value.trim(), interest=$("#interest").value, msg=$("#message").value.trim();
+  const text=`TOP.FATMEYN Application Request%0A%0AName: ${encodeURIComponent(name)}%0AArea: ${encodeURIComponent(interest)}%0AMessage: ${encodeURIComponent(msg)}`;
+  $("#appStatus").textContent="Request prepared";
+  location.href=`https://wa.me/255670675916?text=${text}`;
+};
+</script>
+</body></html>
