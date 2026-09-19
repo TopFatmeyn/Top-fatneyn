@@ -1,90 +1,1591 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TOP.FATMEYN — Digital Platform</title><link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07140f">
+  <title>TOP.FATMEYN — Digital Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header">
-  <a class="brand" href="#home"><span class="dot"></span>TOP.FATMEYN <small>Digital Platform</small></a>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#programs">Programs</a><a href="#dashboard">Dashboard</a><a href="#courses">Courses</a><a href="#news">News</a><a href="#apply">Apply</a><a href="#contact">Contact</a></nav>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand">
+      <span class="brand-mark">T</span>
+      <span>
+        <strong>TOP.FATMEYN</strong>
+        <small>Digital Platform</small>
+      </span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#programs">Programs</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#courses">Courses</a>
+      <a href="#news">News</a>
+      <a href="#apply">Apply</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
+
 <main>
-<section id="home" class="hero">
- <div><span class="eyebrow">V12 • PROFESSIONAL DIGITAL PLATFORM</span><h1>Learn. Build.<br><strong>Move forward.</strong></h1><p>A growing digital platform for practical technology, learning, projects and future opportunities.</p><div class="actions"><a class="btn" href="#courses">Explore Courses</a><a class="btn ghost" href="#dashboard">Open Dashboard →</a></div><div class="checks"><span>✓ Practical learning</span><span>✓ Mobile friendly</span><span>✓ Personal progress</span></div></div>
- <aside class="hero-panel"><span class="online">● ONLINE</span><h3>Your digital space</h3><p>Manage learning, applications and progress from one place.</p><div class="hero-number"><b id="heroCourses">0</b><span>enrolled courses</span></div></aside>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+      <span class="eyebrow">V13 • DIGITAL PLATFORM</span>
+
+      <h1>Learn. Build.<br><span>Move forward.</span></h1>
+
+      <p>
+        TOP.FATMEYN is a growing digital platform for technology,
+        practical projects, useful resources, learning and future opportunities.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+        <a href="#about" class="btn btn-secondary">Discover More →</a>
+      </div>
+
+      <div class="hero-points">
+        <span>✓ Practical learning</span>
+        <span>✓ Mobile friendly</span>
+        <span>✓ Growing platform</span>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="status-head">
+        <span>PLATFORM STATUS</span>
+        <b>● ONLINE</b>
+      </div>
+
+      <div class="status-main">
+        <div class="big-number">V13</div>
+        <h3>Digital Platform</h3>
+        <p>
+          Learn skills, follow your progress and build your digital future.
+        </p>
+      </div>
+
+      <div class="status-grid">
+        <div>
+          <strong>03</strong>
+          <span>Courses</span>
+        </div>
+        <div>
+          <strong>12</strong>
+          <span>Lessons</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>Access</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="about" class="section"><div class="section-head"><span>ABOUT</span><h2>A platform built to grow with you.</h2><p>TOP.FATMEYN is designed as one professional website with room for learning, services, applications, accounts, certificates and future digital systems.</p></div><div class="stats"><div><b>24/7</b><span>Digital access</span></div><div><b>V12</b><span>Current build</span></div><div><b>100%</b><span>Mobile ready</span></div></div></section>
 
-<section id="services" class="section alt"><div class="section-head"><span>SERVICES</span><h2>Explore platform services.</h2></div><div class="grid">
-<article class="card detail" data-title="Digital Resources" data-text="Useful guides, tools and practical resources can be organised here as the platform grows."><i>01</i><h3>Digital Resources</h3><p>Useful tools and learning materials.</p><button>View details →</button></article>
-<article class="card detail" data-title="Project Building" data-text="A future space for practical projects, experiments and technology ideas."><i>02</i><h3>Project Building</h3><p>Turn ideas into practical projects.</p><button>View details →</button></article>
-<article class="card detail" data-title="Digital Support" data-text="A flexible service layer for future applications, accounts and connected platform features."><i>03</i><h3>Digital Support</h3><p>Tools and support for platform users.</p><button>View details →</button></article>
-</div></section>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
 
-<section id="programs" class="section"><div class="section-head"><span>PROGRAMS</span><h2>Choose your direction.</h2></div><div class="grid">
-<article class="card program" data-program="Web Development"><i>01</i><h3>Web Development</h3><p>HTML, CSS, JavaScript and practical projects.</p><button>Explore →</button></article>
-<article class="card program" data-program="AI & Automation"><i>02</i><h3>AI & Automation</h3><p>AI tools, prompting and useful workflows.</p><button>Explore →</button></article>
-<article class="card program" data-program="Cyber & Digital Skills"><i>03</i><h3>Cyber & Digital Skills</h3><p>Digital safety and practical technology skills.</p><button>Explore →</button></article>
-</div></section>
+    <div class="section-heading">
+      <span class="eyebrow">ABOUT TOP.FATMEYN</span>
+      <h2>A digital platform built for growth.</h2>
+      <p>
+        Our goal is to create a professional online environment where
+        people can learn practical technology skills, build projects
+        and discover useful digital opportunities.
+      </p>
+    </div>
 
-<section id="dashboard" class="section alt"><div class="section-head"><span>MY DASHBOARD</span><h2>Your personal learning space.</h2><p>V12 adds a local profile, course progress, application history and notification centre.</p></div>
-<div class="dashboard">
- <aside class="side">
-  <div class="profile-mini"><div class="avatar" id="avatar">T</div><div><b id="profileName">Demo User</b><small id="profileEmail">demo@topfatmeyn</small></div></div>
-  <button class="tab-btn active" data-tab="overview">Overview</button><button class="tab-btn" data-tab="profile">Profile</button><button class="tab-btn" data-tab="mycourses">My Courses</button><button class="tab-btn" data-tab="applications">Applications</button><button class="tab-btn" data-tab="certificates">Certificates</button><button class="tab-btn" data-tab="notifications">Notifications <em id="notifCount">1</em></button><button class="tab-btn" data-tab="settings">Settings</button>
- </aside>
- <div class="dash-main">
-  <div class="tab active" id="overview"><div class="dash-top"><div><small>ACCOUNT STATUS</small><h3>Welcome back 👋</h3></div><span class="pill">DEMO ACCOUNT</span></div><div class="progress-box"><div class="row"><b>Overall learning progress</b><strong id="overall">0%</strong></div><div class="bar"><span id="overallBar"></span></div></div><div class="tiles"><div><b id="enrolled">0</b><span>Enrolled courses</span></div><div><b id="done">0</b><span>Completed lessons</span></div><div><b>0</b><span>Certificates</span></div></div></div>
-  <div class="tab" id="profile"><h3>Profile</h3><form id="profileForm" class="profile-form"><label>Full name<input id="pName" required></label><label>Email<input id="pEmail" type="email" required></label><label>About you<textarea id="pAbout" placeholder="A short profile description..."></textarea></label><button class="btn">Save profile</button></form></div>
-  <div class="tab" id="mycourses"><h3>My Courses</h3><div id="myCourseList"></div></div>
-  <div class="tab" id="applications"><h3>Application history</h3><div id="appList" class="notice"></div></div>
-  <div class="tab" id="certificates"><h3>Certificates</h3><div class="empty">🏆 Your certificates will appear here when the certificate system is connected.</div></div>
-  <div class="tab" id="notifications"><h3>Notifications</h3><div class="notice"><b>Welcome to V12</b><br><small>Your dashboard and profile tools are ready.</small></div></div>
-  <div class="tab" id="settings"><h3>Account settings</h3><div class="settings-row"><span>Demo account</span><b>Active</b></div><button class="danger" id="reset">Reset local data</button></div>
- </div>
-</div></section>
+    <div class="about-grid">
 
-<section id="courses" class="section"><div class="section-head"><span>COURSE CENTRE</span><h2>Learn at your pace.</h2><p>Enroll once, then open your dashboard to complete lessons and track progress.</p></div><div class="course-grid">
-<article class="course" data-name="Web Development Basics" data-lessons="HTML foundations|CSS styling|JavaScript basics|Build a mini website"><span>WEB</span><h3>Web Development Basics</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
-<article class="course" data-name="Digital Skills" data-lessons="Digital tools|Online safety|File management|Productivity basics"><span>SKILLS</span><h3>Digital Skills</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
-<article class="course" data-name="AI Tools" data-lessons="AI basics|Prompt writing|AI productivity|Practical workflow"><span>AI</span><h3>AI Tools</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
-</div></section>
+      <div class="about-card">
+        <span class="card-icon">01</span>
+        <h3>Learn</h3>
+        <p>
+          Access practical digital learning materials and structured courses.
+        </p>
+      </div>
 
-<section id="news" class="section alt"><div class="section-head"><span>NEWS & UPDATES</span><h2>Platform updates.</h2></div><div class="news-grid"><article><small>V12</small><h3>Personal dashboard upgraded</h3><p>Profiles, course progress, applications and notifications are now organised in one dashboard.</p></article><article><small>COURSES</small><h3>Learning centre is growing</h3><p>More course content can be added to the platform over time.</p></article></div></section>
+      <div class="about-card">
+        <span class="card-icon">02</span>
+        <h3>Build</h3>
+        <p>
+          Turn knowledge into projects and real digital experiences.
+        </p>
+      </div>
 
-<section id="apply" class="section"><div class="section-head"><span>APPLICATIONS</span><h2>Send a request.</h2><p>Use the form to prepare a request and send it through WhatsApp.</p></div><form id="applyForm" class="form"><input id="aName" required placeholder="Full name"><select id="interest"><option>Web Development</option><option>AI & Automation</option><option>Cyber & Digital Skills</option><option>Creative Technology</option><option>Digital Resources</option><option>General enquiry</option></select><textarea id="aMessage" required placeholder="Tell us what you need..."></textarea><button class="btn">Send via WhatsApp</button></form></section>
+      <div class="about-card">
+        <span class="card-icon">03</span>
+        <h3>Grow</h3>
+        <p>
+          Follow your progress and prepare for future opportunities.
+        </p>
+      </div>
 
-<section id="contact" class="section alt"><div class="section-head"><span>CONTACT</span><h2>Connect with TOP.FATMEYN.</h2></div><div class="contact"><a href="https://wa.me/255670675916">WhatsApp</a><a href="https://www.tiktok.com/@____yk4x">TikTok</a><a href="https://www.instagram.com/____yk4x">Instagram</a></div></section>
-</main><footer>© 2026 TOP.FATMEYN • Digital Platform</footer>
+    </div>
+  </div>
+</section>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalBody"></div></div></div>
+
+<!-- SERVICES -->
+<section class="section section-dark" id="services">
+  <div class="container">
+
+    <div class="section-heading light">
+      <span class="eyebrow">SERVICES</span>
+      <h2>Useful digital services.</h2>
+      <p>
+        The platform is designed to grow with more services and resources over time.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="feature-card">
+        <div class="feature-number">01</div>
+        <h3>Digital Resources</h3>
+        <p>
+          Useful learning materials, guides and digital resources.
+        </p>
+        <button class="outline-btn service-btn"
+          data-title="Digital Resources"
+          data-text="Access useful digital resources, guides and learning materials through the platform.">
+          View Details
+        </button>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-number">02</div>
+        <h3>Project Building</h3>
+        <p>
+          Practical projects designed to help turn ideas into working results.
+        </p>
+        <button class="outline-btn service-btn"
+          data-title="Project Building"
+          data-text="Build practical projects and develop experience through real digital work.">
+          View Details
+        </button>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-number">03</div>
+        <h3>Digital Support</h3>
+        <p>
+          Guidance and support for technology-related learning.
+        </p>
+        <button class="outline-btn service-btn"
+          data-title="Digital Support"
+          data-text="Get guidance around digital skills, projects and technology learning.">
+          View Details
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROGRAMS -->
+<section class="section" id="programs">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">PROGRAMS</span>
+      <h2>Choose an area to explore.</h2>
+      <p>
+        More programs can be added as TOP.FATMEYN grows.
+      </p>
+    </div>
+
+    <div class="program-grid">
+
+      <article class="program-card">
+        <span>TECHNOLOGY</span>
+        <h3>Web Development</h3>
+        <p>
+          Learn the foundations of creating websites and digital interfaces.
+        </p>
+        <button class="text-btn program-btn"
+          data-title="Web Development"
+          data-text="Learn HTML, CSS, JavaScript and practical website development.">
+          Explore →
+        </button>
+      </article>
+
+      <article class="program-card">
+        <span>AI</span>
+        <h3>AI & Automation</h3>
+        <p>
+          Explore AI tools, prompting and practical digital workflows.
+        </p>
+        <button class="text-btn program-btn"
+          data-title="AI & Automation"
+          data-text="Learn the basics of AI tools, prompt writing and useful automation workflows.">
+          Explore →
+        </button>
+      </article>
+
+      <article class="program-card">
+        <span>DIGITAL</span>
+        <h3>Cyber & Digital Skills</h3>
+        <p>
+          Develop useful digital knowledge and online safety awareness.
+        </p>
+        <button class="text-btn program-btn"
+          data-title="Cyber & Digital Skills"
+          data-text="Build digital skills, understand online safety and improve technology awareness.">
+          Explore →
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- DASHBOARD -->
+<section class="section section-soft" id="dashboard">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">MY SPACE</span>
+      <h2>Your learning dashboard.</h2>
+      <p>
+        Track your learning, applications, certificates and account information.
+      </p>
+    </div>
+
+    <div class="dashboard">
+
+      <aside class="dashboard-sidebar">
+
+        <div class="profile-mini">
+          <div class="avatar" id="avatarInitial">T</div>
+          <div>
+            <strong id="sideName">Demo User</strong>
+            <small id="sideEmail">demo@topfatmeyn.com</small>
+          </div>
+        </div>
+
+        <button class="dash-tab active" data-tab="overview">
+          Overview
+        </button>
+
+        <button class="dash-tab" data-tab="profile">
+          Profile
+        </button>
+
+        <button class="dash-tab" data-tab="learning">
+          My Learning
+        </button>
+
+        <button class="dash-tab" data-tab="applications">
+          Applications
+        </button>
+
+        <button class="dash-tab" data-tab="certificates">
+          Certificates
+        </button>
+
+        <button class="dash-tab" data-tab="notifications">
+          Notifications
+        </button>
+
+        <button class="dash-tab" data-tab="settings">
+          Settings
+        </button>
+
+      </aside>
+
+
+      <div class="dashboard-content">
+
+        <!-- OVERVIEW -->
+        <div class="dash-page active" id="tab-overview">
+
+          <div class="dash-top">
+            <div>
+              <span class="eyebrow">OVERVIEW</span>
+              <h3>Welcome to your space.</h3>
+            </div>
+
+            <span class="online-badge">● Active</span>
+          </div>
+
+          <div class="dashboard-stats">
+
+            <div class="stat-box">
+              <strong id="courseCount">0</strong>
+              <span>Courses</span>
+            </div>
+
+            <div class="stat-box">
+              <strong id="lessonCount">0</strong>
+              <span>Lessons Done</span>
+            </div>
+
+            <div class="stat-box">
+              <strong id="applicationCount">0</strong>
+              <span>Applications</span>
+            </div>
+
+            <div class="stat-box">
+              <strong id="certificateCount">0</strong>
+              <span>Certificates</span>
+            </div>
+
+          </div>
+
+          <div class="dashboard-message">
+            <h4>Continue your journey</h4>
+            <p>
+              Open the Courses section and enroll in a course to start tracking
+              your learning progress.
+            </p>
+
+            <a href="#courses" class="btn btn-primary">Browse Courses</a>
+          </div>
+
+        </div>
+
+
+        <!-- PROFILE -->
+        <div class="dash-page" id="tab-profile">
+
+          <span class="eyebrow">PROFILE</span>
+          <h3>Account information</h3>
+
+          <form id="profileForm" class="form-grid">
+
+            <label>
+              Full Name
+              <input id="profileName" type="text"
+                placeholder="Your full name">
+            </label>
+
+            <label>
+              Email
+              <input id="profileEmail" type="email"
+                placeholder="Your email">
+            </label>
+
+            <label class="full">
+              About You
+              <textarea id="profileAbout"
+                placeholder="Tell us something about yourself"></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">
+              Save Profile
+            </button>
+
+          </form>
+
+          <p class="save-message" id="profileMessage"></p>
+
+        </div>
+
+
+        <!-- LEARNING -->
+        <div class="dash-page" id="tab-learning">
+
+          <span class="eyebrow">MY LEARNING</span>
+          <h3>Your courses</h3>
+
+          <div id="myLearningList" class="learning-list">
+            <div class="empty-state">
+              No courses enrolled yet.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- APPLICATIONS -->
+        <div class="dash-page" id="tab-applications">
+
+          <span class="eyebrow">APPLICATIONS</span>
+          <h3>Application history</h3>
+
+          <div id="applicationHistory">
+            <div class="empty-state">
+              No applications submitted yet.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- CERTIFICATES -->
+        <div class="dash-page" id="tab-certificates">
+
+          <span class="eyebrow">CERTIFICATES</span>
+          <h3>Your certificates</h3>
+
+          <div id="certificateList">
+            <div class="empty-state">
+              Certificates will appear here after eligible courses are completed.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- NOTIFICATIONS -->
+        <div class="dash-page" id="tab-notifications">
+
+          <span class="eyebrow">NOTIFICATIONS</span>
+          <h3>Updates</h3>
+
+          <div class="notification">
+            <strong>Welcome to TOP.FATMEYN.</strong>
+            <p>
+              Your V13 digital learning space is ready.
+            </p>
+          </div>
+
+          <div class="notification">
+            <strong>New courses can be added.</strong>
+            <p>
+              Check the Course Centre regularly for new learning content.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- SETTINGS -->
+        <div class="dash-page" id="tab-settings">
+
+          <span class="eyebrow">SETTINGS</span>
+          <h3>Account settings</h3>
+
+          <p>
+            Your demo learning data is stored locally in this browser.
+          </p>
+
+          <button class="danger-btn" id="resetData">
+            Reset Demo Data
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- COURSES -->
+<section class="section" id="courses">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">COURSE CENTRE</span>
+      <h2>Start learning today.</h2>
+      <p>
+        Choose a course and follow your progress lesson by lesson.
+      </p>
+    </div>
+
+    <div class="course-grid">
+
+      <article class="course-card">
+
+        <div class="course-top">
+          <span class="course-tag">TECH</span>
+          <span>4 Lessons</span>
+        </div>
+
+        <h3>Web Development Basics</h3>
+
+        <p>
+          Learn the foundations of modern website development.
+        </p>
+
+        <div class="course-progress">
+          <div class="progress-bar">
+            <span id="progress-web"></span>
+          </div>
+          <small id="progress-web-text">0% complete</small>
+        </div>
+
+        <button class="btn btn-primary course-btn"
+          data-course="web">
+          Open Course
+        </button>
+
+      </article>
+
+
+      <article class="course-card">
+
+        <div class="course-top">
+          <span class="course-tag">DIGITAL</span>
+          <span>4 Lessons</span>
+        </div>
+
+        <h3>Digital Skills</h3>
+
+        <p>
+          Build practical digital knowledge for everyday technology.
+        </p>
+
+        <div class="course-progress">
+          <div class="progress-bar">
+            <span id="progress-digital"></span>
+          </div>
+          <small id="progress-digital-text">0% complete</small>
+        </div>
+
+        <button class="btn btn-primary course-btn"
+          data-course="digital">
+          Open Course
+        </button>
+
+      </article>
+
+
+      <article class="course-card">
+
+        <div class="course-top">
+          <span class="course-tag">AI</span>
+          <span>4 Lessons</span>
+        </div>
+
+        <h3>AI Tools</h3>
+
+        <p>
+          Learn AI basics, prompting and practical AI workflows.
+        </p>
+
+        <div class="course-progress">
+          <div class="progress-bar">
+            <span id="progress-ai"></span>
+          </div>
+          <small id="progress-ai-text">0% complete</small>
+        </div>
+
+        <button class="btn btn-primary course-btn"
+          data-course="ai">
+          Open Course
+        </button>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- NEWS -->
+<section class="section section-dark" id="news">
+  <div class="container">
+
+    <div class="section-heading light">
+      <span class="eyebrow">NEWS & UPDATES</span>
+      <h2>What's happening.</h2>
+      <p>
+        Future platform updates, learning announcements and events can appear here.
+      </p>
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-card">
+        <span>PLATFORM</span>
+        <h3>TOP.FATMEYN V13</h3>
+        <p>
+          The platform now includes a learning dashboard and course progress system.
+        </p>
+      </article>
+
+      <article class="news-card">
+        <span>LEARNING</span>
+        <h3>New Courses</h3>
+        <p>
+          More technology and digital courses can be added as the platform grows.
+        </p>
+      </article>
+
+      <article class="news-card">
+        <span>FUTURE</span>
+        <h3>More Features Ahead</h3>
+        <p>
+          Applications, certificates, accounts and additional services can grow with the platform.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- APPLY -->
+<section class="section" id="apply">
+  <div class="container">
+
+    <div class="application-layout">
+
+      <div class="section-heading">
+        <span class="eyebrow">APPLICATIONS</span>
+        <h2>Start your next step.</h2>
+        <p>
+          Send your request directly through WhatsApp and keep a record
+          in your dashboard.
+        </p>
+
+        <div class="apply-note">
+          <strong>How it works</strong>
+          <ol>
+            <li>Fill in your details.</li>
+            <li>Select what you are interested in.</li>
+            <li>Send your request.</li>
+          </ol>
+        </div>
+      </div>
+
+
+      <form id="applicationForm" class="application-form">
+
+        <label>
+          Full Name
+          <input id="appName" type="text"
+            placeholder="Enter your name" required>
+        </label>
+
+        <label>
+          What are you interested in?
+          <select id="appInterest" required>
+            <option value="">Select an option</option>
+            <option>Web Development</option>
+            <option>AI & Automation</option>
+            <option>Cyber & Digital Skills</option>
+            <option>Creative Technology</option>
+            <option>Digital Resources</option>
+            <option>General enquiry</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea id="appMessage"
+            placeholder="Write your request..." required></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">
+          Send Application
+        </button>
+
+        <small>
+          Your request will open in WhatsApp.
+        </small>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section section-soft" id="contact">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">CONTACT</span>
+      <h2>Connect with TOP.FATMEYN.</h2>
+      <p>
+        Follow the platform and get in touch.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <a class="contact-card"
+        href="https://wa.me/255670675916"
+        target="_blank">
+        <strong>WhatsApp</strong>
+        <span>+255 670 675 916</span>
+      </a>
+
+      <a class="contact-card"
+        href="https://www.tiktok.com/@____yk4x"
+        target="_blank">
+        <strong>TikTok</strong>
+        <span>@____yk4x</span>
+      </a>
+
+      <a class="contact-card"
+        href="https://www.instagram.com/____yk4x"
+        target="_blank">
+        <strong>Instagram</strong>
+        <span>@____yk4x</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <strong>TOP.FATMEYN</strong>
+      <p>Digital Platform</p>
+    </div>
+
+    <div>
+      <span>© 2026 TOP.FATMEYN. All rights reserved.</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- SERVICE / PROGRAM MODAL -->
+<div class="modal" id="infoModal">
+  <div class="modal-box">
+
+    <button class="modal-close" id="modalClose">×</button>
+
+    <span class="eyebrow">TOP.FATMEYN</span>
+    <h2 id="modalTitle">Details</h2>
+    <p id="modalText"></p>
+
+    <button class="btn btn-primary" id="modalAction">
+      Continue
+    </button>
+
+  </div>
+</div>
+
+
+<!-- COURSE MODAL -->
+<div class="modal" id="courseModal">
+
+  <div class="modal-box course-viewer">
+
+    <button class="modal-close" id="courseClose">×</button>
+
+    <span class="eyebrow" id="courseLabel">COURSE</span>
+
+    <h2 id="courseTitle">Course</h2>
+
+    <p id="courseDescription"></p>
+
+    <div class="lesson-list" id="lessonList"></div>
+
+    <div class="course-viewer-actions">
+      <button class="btn btn-primary" id="saveCourseProgress">
+        Save Progress
+      </button>
+
+      <span id="courseProgressMessage"></span>
+    </div>
+
+  </div>
+</div>
+
+
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const KEY="topfatmeyn_v12";let state=JSON.parse(localStorage.getItem(KEY)||'{"profile":{"name":"Demo User","email":"demo@topfatmeyn","about":""},"courses":{},"applications":[]}');
-function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
-function render(){
- $("#profileName").textContent=state.profile.name||"Demo User";$("#profileEmail").textContent=state.profile.email||"demo@topfatmeyn";$("#avatar").textContent=(state.profile.name||"T").trim()[0].toUpperCase();
- $("#pName").value=state.profile.name||"";$("#pEmail").value=state.profile.email||"";$("#pAbout").value=state.profile.about||"";
- const cs=Object.values(state.courses), total=cs.reduce((a,c)=>a+c.lessons.length,0), done=cs.reduce((a,c)=>a+c.done.filter(Boolean).length,0), pct=total?Math.round(done/total*100):0;
- $("#enrolled").textContent=cs.length;$("#heroCourses").textContent=cs.length;$("#done").textContent=done;$("#overall").textContent=pct+"%";$("#overallBar").style.width=pct+"%";
- $("#notifCount").textContent="1";
- $("#appList").innerHTML=state.applications.length?state.applications.map(a=>`<div class="app"><b>${a.interest}</b><span>Pending</span><small>${a.date}</small></div>`).join(""):"No applications submitted from this browser yet.";
- $("#myCourseList").innerHTML=cs.length?cs.map(c=>{let p=Math.round(c.done.filter(Boolean).length/c.lessons.length*100);return `<div class="my-course"><div class="row"><b>${c.name}</b><strong>${p}%</strong></div><div class="bar"><span style="width:${p}%"></span></div><div class="lessons">${c.lessons.map((l,i)=>`<label><input type="checkbox" data-c="${c.name}" data-i="${i}" ${c.done[i]?'checked':''}> ${l}</label>`).join("")}</div></div>`}).join(""):"<div class='empty'>No courses yet. Enroll below.</div>";
- $$("[data-c]").forEach(x=>x.onchange=()=>{state.courses[x.dataset.c].done[x.dataset.i]=x.checked;save();});
+/* =========================================
+   TOP.FATMEYN V13
+   Local demo learning system
+========================================= */
+
+const STORAGE_KEY = "topfatmeyn_v13";
+
+const defaultState = {
+  profile: {
+    name: "Demo User",
+    email: "demo@topfatmeyn.com",
+    about: ""
+  },
+
+  courses: {
+    web: [],
+    digital: [],
+    ai: []
+  },
+
+  applications: [],
+
+  certificates: []
+};
+
+let state = JSON.parse(
+  localStorage.getItem(STORAGE_KEY) ||
+  JSON.stringify(defaultState)
+);
+
+
+/* SAVE STATE */
+
+function saveState() {
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(state)
+  );
 }
-render();
-$("#menuBtn").onclick=()=>$("#nav").classList.toggle("open");$$("nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
-$$(".tab-btn").forEach(b=>b.onclick=()=>{$$(".tab-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");$$(".tab").forEach(x=>x.classList.remove("active"));$("#"+b.dataset.tab).classList.add("active")});
-$$(".enroll").forEach(b=>b.onclick=()=>{let c=b.closest(".course"),n=c.dataset.name;if(!state.courses[n])state.courses[n]={name:n,lessons:c.dataset.lessons.split("|"),done:[false,false,false,false]};save();location.hash="dashboard";});
-$("#profileForm").onsubmit=e=>{e.preventDefault();state.profile={name:$("#pName").value,email:$("#pEmail").value,about:$("#pAbout").value};save();alert("Profile saved.");};
-$("#reset").onclick=()=>{if(confirm("Reset all local V12 data?")){localStorage.removeItem(KEY);location.reload();}};
-$$(".detail").forEach(c=>c.querySelector("button").onclick=()=>{ $("#modalBody").innerHTML=`<h2>${c.dataset.title}</h2><p>${c.dataset.text}</p>`;$("#modal").classList.add("show")});
-$$(".program").forEach(c=>c.querySelector("button").onclick=()=>{ $("#modalBody").innerHTML=`<h2>${c.dataset.program}</h2><p>This program is structured for practical learning. Choose a related course from the Course Centre to start.</p><a class="btn" href="#courses" onclick="modal.classList.remove('show')">View courses</a>`;$("#modal").classList.add("show")});
-$("#close").onclick=()=>$("#modal").classList.remove("show");$("#modal").onclick=e=>{if(e.target.id==="modal")$("#modal").classList.remove("show")};
-$("#applyForm").onsubmit=e=>{e.preventDefault();let a={interest:$("#interest").value,date:new Date().toLocaleDateString()};state.applications.push(a);save();let text=`TOP.FATMEYN Request%0AName: ${encodeURIComponent($("#aName").value)}%0AInterest: ${encodeURIComponent($("#interest").value)}%0AMessage: ${encodeURIComponent($("#aMessage").value)}`;location.href="https://wa.me/255670675916?text="+text;};
+
+
+/* MOBILE MENU */
+
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+}
+
+document.querySelectorAll("#mainNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+  });
+});
+
+
+/* INFO MODAL */
+
+const infoModal = document.getElementById("infoModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+const modalClose = document.getElementById("modalClose");
+
+function openInfoModal(title, text) {
+  modalTitle.textContent = title;
+  modalText.textContent = text;
+  infoModal.classList.add("show");
+}
+
+document.querySelectorAll(".service-btn, .program-btn")
+.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    openInfoModal(
+      button.dataset.title,
+      button.dataset.text
+    );
+
+  });
+
+});
+
+modalClose.addEventListener("click", () => {
+  infoModal.classList.remove("show");
+});
+
+infoModal.addEventListener("click", e => {
+  if (e.target === infoModal) {
+    infoModal.classList.remove("show");
+  }
+});
+
+
+/* COURSE DATA */
+
+const courses = {
+
+  web: {
+    title: "Web Development Basics",
+    label: "TECHNOLOGY",
+    description:
+      "Learn the foundations of creating modern websites.",
+    lessons: [
+      "HTML foundations",
+      "CSS styling",
+      "JavaScript basics",
+      "Build a mini website"
+    ]
+  },
+
+  digital: {
+    title: "Digital Skills",
+    label: "DIGITAL",
+    description:
+      "Build useful digital skills for everyday technology.",
+    lessons: [
+      "Digital tools",
+      "Online safety",
+      "File management",
+      "Productivity basics"
+    ]
+  },
+
+  ai: {
+    title: "AI Tools",
+    label: "AI",
+    description:
+      "Learn AI basics, prompting and practical workflows.",
+    lessons: [
+      "AI basics",
+      "Prompt writing",
+      "AI productivity",
+      "Practical workflow"
+    ]
+  }
+
+};
+
+
+/* COURSE MODAL */
+
+const courseModal = document.getElementById("courseModal");
+const courseClose = document.getElementById("courseClose");
+const courseTitle = document.getElementById("courseTitle");
+const courseLabel = document.getElementById("courseLabel");
+const courseDescription =
+  document.getElementById("courseDescription");
+const lessonList =
+  document.getElementById("lessonList");
+
+let currentCourse = null;
+
+
+function openCourse(courseId) {
+
+  currentCourse = courseId;
+
+  const course = courses[courseId];
+
+  courseTitle.textContent = course.title;
+  courseLabel.textContent = course.label;
+  courseDescription.textContent = course.description;
+
+  const completed =
+    state.courses[courseId] || [];
+
+  lessonList.innerHTML = "";
+
+  course.lessons.forEach((lesson, index) => {
+
+    const checked =
+      completed.includes(index);
+
+    const row = document.createElement("label");
+
+    row.className = "lesson-row";
+
+    row.innerHTML = `
+      <input
+        type="checkbox"
+        value="${index}"
+        ${checked ? "checked" : ""}
+      >
+
+      <span>
+        Lesson ${index + 1}: ${lesson}
+      </span>
+    `;
+
+    lessonList.appendChild(row);
+
+  });
+
+  document.getElementById(
+    "courseProgressMessage"
+  ).textContent = "";
+
+  courseModal.classList.add("show");
+
+  document.body.classList.add("modal-open");
+}
+
+
+document.querySelectorAll(".course-btn")
+.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    openCourse(
+      button.dataset.course
+    );
+
+  });
+
+});
+
+
+courseClose.addEventListener("click", () => {
+
+  courseModal.classList.remove("show");
+
+  document.body.classList.remove("modal-open");
+
+});
+
+
+courseModal.addEventListener("click", e => {
+
+  if (e.target === courseModal) {
+
+    courseModal.classList.remove("show");
+
+    document.body.classList.remove("modal-open");
+
+  }
+
+});
+
+
+/* SAVE COURSE PROGRESS */
+
+document.getElementById(
+  "saveCourseProgress"
+).addEventListener("click", () => {
+
+  if (!currentCourse) return;
+
+  const checked = [];
+
+  lessonList
+    .querySelectorAll("input[type='checkbox']")
+    .forEach(input => {
+
+      if (input.checked) {
+        checked.push(Number(input.value));
+      }
+
+    });
+
+  state.courses[currentCourse] = checked;
+
+  saveState();
+
+  updateDashboard();
+
+  updateCourseProgress();
+
+  document.getElementById(
+    "courseProgressMessage"
+  ).textContent =
+    "Progress saved ✓";
+
+});
+
+
+/* COURSE PROGRESS */
+
+function updateCourseProgress() {
+
+  Object.keys(courses).forEach(id => {
+
+    const total =
+      courses[id].lessons.length;
+
+    const done =
+      state.courses[id]?.length || 0;
+
+    const percentage =
+      Math.round((done / total) * 100);
+
+    const bar =
+      document.getElementById(
+        `progress-${id}`
+      );
+
+    const text =
+      document.getElementById(
+        `progress-${id}-text`
+      );
+
+    if (bar) {
+      bar.style.width =
+        percentage + "%";
+    }
+
+    if (text) {
+      text.textContent =
+        percentage + "% complete";
+    }
+
+  });
+
+}
+
+
+/* DASHBOARD TABS */
+
+const dashTabs =
+  document.querySelectorAll(".dash-tab");
+
+const dashPages =
+  document.querySelectorAll(".dash-page");
+
+
+dashTabs.forEach(tab => {
+
+  tab.addEventListener("click", () => {
+
+    dashTabs.forEach(t =>
+      t.classList.remove("active")
+    );
+
+    dashPages.forEach(page =>
+      page.classList.remove("active")
+    );
+
+    tab.classList.add("active");
+
+    const target =
+      document.getElementById(
+        "tab-" + tab.dataset.tab
+      );
+
+    if (target) {
+      target.classList.add("active");
+    }
+
+    updateDashboard();
+
+  });
+
+});
+
+
+/* PROFILE */
+
+function loadProfile() {
+
+  document.getElementById(
+    "profileName"
+  ).value =
+    state.profile.name || "";
+
+  document.getElementById(
+    "profileEmail"
+  ).value =
+    state.profile.email || "";
+
+  document.getElementById(
+    "profileAbout"
+  ).value =
+    state.profile.about || "";
+
+}
+
+
+document.getElementById(
+  "profileForm"
+).addEventListener("submit", e => {
+
+  e.preventDefault();
+
+  state.profile.name =
+    document.getElementById(
+      "profileName"
+    ).value.trim() || "Demo User";
+
+  state.profile.email =
+    document.getElementById(
+      "profileEmail"
+    ).value.trim() ||
+    "demo@topfatmeyn.com";
+
+  state.profile.about =
+    document.getElementById(
+      "profileAbout"
+    ).value.trim();
+
+  saveState();
+
+  updateDashboard();
+
+  document.getElementById(
+    "profileMessage"
+  ).textContent =
+    "Profile saved successfully ✓";
+
+});
+
+
+/* DASHBOARD UPDATE */
+
+function updateDashboard() {
+
+  const name =
+    state.profile.name || "Demo User";
+
+  const email =
+    state.profile.email ||
+    "demo@topfatmeyn.com";
+
+  document.getElementById(
+    "sideName"
+  ).textContent = name;
+
+  document.getElementById(
+    "sideEmail"
+  ).textContent = email;
+
+  document.getElementById(
+    "avatarInitial"
+  ).textContent =
+    name.charAt(0).toUpperCase();
+
+  let enrolled = 0;
+  let lessonsDone = 0;
+
+  Object.keys(state.courses)
+  .forEach(id => {
+
+    const completed =
+      state.courses[id] || [];
+
+    if (completed.length > 0) {
+      enrolled++;
+    }
+
+    lessonsDone +=
+      completed.length;
+
+  });
+
+
+  document.getElementById(
+    "courseCount"
+  ).textContent = enrolled;
+
+  document.getElementById(
+    "lessonCount"
+  ).textContent = lessonsDone;
+
+  document.getElementById(
+    "applicationCount"
+  ).textContent =
+    state.applications.length;
+
+  document.getElementById(
+    "certificateCount"
+  ).textContent =
+    state.certificates.length;
+
+
+  updateLearningList();
+
+  updateApplications();
+
+  updateCertificates();
+
+}
+
+
+/* MY LEARNING */
+
+function updateLearningList() {
+
+  const container =
+    document.getElementById(
+      "myLearningList"
+    );
+
+  const enrolled =
+    Object.keys(courses)
+    .filter(id =>
+      (state.courses[id] || []).length > 0
+    );
+
+  if (!enrolled.length) {
+
+    container.innerHTML =
+      `<div class="empty-state">
+        No courses enrolled yet.
+      </div>`;
+
+    return;
+  }
+
+
+  container.innerHTML = enrolled.map(id => {
+
+    const course = courses[id];
+
+    const done =
+      state.courses[id].length;
+
+    const total =
+      course.lessons.length;
+
+    const percentage =
+      Math.round(
+        (done / total) * 100
+      );
+
+    return `
+      <div class="learning-item">
+
+        <div>
+          <strong>${course.title}</strong>
+          <small>
+            ${done}/${total} lessons completed
+          </small>
+        </div>
+
+        <div class="mini-progress">
+          <span style="width:${percentage}%"></span>
+        </div>
+
+        <b>${percentage}%</b>
+
+      </div>
+    `;
+
+  }).join("");
+
+}
+
+
+/* APPLICATIONS */
+
+function updateApplications() {
+
+  const container =
+    document.getElementById(
+      "applicationHistory"
+    );
+
+  if (!state.applications.length) {
+
+    container.innerHTML =
+      `<div class="empty-state">
+        No applications submitted yet.
+      </div>`;
+
+    return;
+  }
+
+
+  container.innerHTML =
+    state.applications
+    .slice()
+    .reverse()
+    .map(app => `
+
+      <div class="application-item">
+
+        <div>
+          <strong>${escapeHTML(app.name)}</strong>
+
+          <small>
+            ${escapeHTML(app.interest)}
+          </small>
+
+          <p>
+            ${escapeHTML(app.message)}
+          </p>
+        </div>
+
+        <span class="application-status">
+          Sent
+        </span>
+
+      </div>
+
+    `)
+    .join("");
+
+}
+
+
+/* CERTIFICATES */
+
+function updateCertificates() {
+
+  const container =
+    document.getElementById(
+      "certificateList"
+    );
+
+  if (!state.certificates.length) {
+
+    container.innerHTML =
+      `<div class="empty-state">
+        Certificates will appear here after eligible courses are completed.
+      </div>`;
+
+    return;
+  }
+
+
+  container.innerHTML =
+    state.certificates
+    .map(cert => `
+
+      <div class="certificate-item">
+
+        <strong>
+          ${escapeHTML(cert)}
+        </strong>
+
+        <span>
+          TOP.FATMEYN
+        </span>
+
+      </div>
+
+    `)
+    .join("");
+
+}
+
+
+/* APPLICATION FORM */
+
+document.getElementById(
+  "applicationForm"
+).addEventListener("submit", e => {
+
+  e.preventDefault();
+
+  const name =
+    document.getElementById(
+      "appName"
+    ).value.trim();
+
+  const interest =
+    document.getElementById(
+      "appInterest"
+    ).value;
+
+  const message =
+    document.getElementById(
+      "appMessage"
+    ).value.trim();
+
+
+  if (!name || !interest || !message) {
+    return;
+  }
+
+
+  state.applications.push({
+
+    name,
+    interest,
+    message,
+
+    date:
+      new Date().toLocaleString()
+
+  });
+
+  saveState();
+
+  updateDashboard();
+
+
+  const whatsappMessage =
+`Hello TOP.FATMEYN,
+
+Name: ${name}
+
+Interest: ${interest}
+
+Message:
+${message}`;
+
+
+  const whatsappURL =
+    "https://wa.me/255670675916?text=" +
+    encodeURIComponent(
+      whatsappMessage
+    );
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+
+
+  document.getElementById(
+    "applicationForm"
+  ).reset();
+
+});
+
+
+/* RESET DATA */
+
+document.getElementById(
+  "resetData"
+).addEventListener("click", () => {
+
+  const confirmed =
+    confirm(
+      "Reset all TOP.FATMEYN demo data?"
+    );
+
+  if (!confirmed) return;
+
+  state =
+    JSON.parse(
+      JSON.stringify(defaultState)
+    );
+
+  saveState();
+
+  loadProfile();
+
+  updateDashboard();
+
+  updateCourseProgress();
+
+});
+
+
+/* SECURITY HELPER */
+
+function escapeHTML(value) {
+
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+}
+
+
+/* INITIAL LOAD */
+
+loadProfile();
+
+updateDashboard();
+
+updateCourseProgress();
+
 </script>
-</body></html>
+
+</body>
+</html>
