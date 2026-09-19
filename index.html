@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07140f">
+  <meta name="theme-color" content="#071b14">
   <title>TOP.FATMEYN — Digital Platform</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,6 +12,7 @@
 
 <header class="site-header">
   <div class="container nav-wrap">
+
     <a href="#home" class="brand">
       <span class="brand-mark">T</span>
       <span>
@@ -20,7 +21,7 @@
       </span>
     </a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
 
     <nav id="mainNav">
       <a href="#home">Home</a>
@@ -33,6 +34,7 @@
       <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
 </header>
 
@@ -43,56 +45,71 @@
 <section class="hero" id="home">
   <div class="container hero-grid">
 
-    <div class="hero-content">
-      <span class="eyebrow">V13 • DIGITAL PLATFORM</span>
+    <div>
+      <span class="eyebrow">TOP.FATMEYN DIGITAL PLATFORM</span>
 
-      <h1>Learn. Build.<br><span>Move forward.</span></h1>
+      <h1>
+        Learn. Build.<br>
+        <span>Move forward.</span>
+      </h1>
 
-      <p>
+      <p class="hero-copy">
         TOP.FATMEYN is a growing digital platform for technology,
-        practical projects, useful resources, learning and future opportunities.
+        practical projects, useful resources, learning and future
+        opportunities.
       </p>
 
       <div class="hero-actions">
-        <a href="#courses" class="btn btn-primary">Explore Courses</a>
-        <a href="#about" class="btn btn-secondary">Discover More →</a>
+        <a href="#courses" class="btn primary">
+          Explore Courses
+        </a>
+
+        <a href="#about" class="btn light">
+          Discover More →
+        </a>
       </div>
 
-      <div class="hero-points">
+      <div class="checks">
         <span>✓ Practical learning</span>
         <span>✓ Mobile friendly</span>
         <span>✓ Growing platform</span>
       </div>
     </div>
 
-    <div class="hero-panel">
-      <div class="status-head">
+
+    <div class="status-card">
+
+      <div class="status-top">
         <span>PLATFORM STATUS</span>
         <b>● ONLINE</b>
       </div>
 
-      <div class="status-main">
-        <div class="big-number">V13</div>
-        <h3>Digital Platform</h3>
-        <p>
-          Learn skills, follow your progress and build your digital future.
-        </p>
-      </div>
+      <div class="version">V14</div>
 
-      <div class="status-grid">
+      <h2>Digital Platform</h2>
+
+      <p>
+        Learn skills, follow your progress and build
+        your digital future.
+      </p>
+
+      <div class="mini-stats">
         <div>
-          <strong>03</strong>
+          <strong id="heroCourses">0</strong>
           <span>Courses</span>
         </div>
+
         <div>
-          <strong>12</strong>
-          <span>Lessons</span>
+          <strong id="heroProgress">0%</strong>
+          <span>Progress</span>
         </div>
+
         <div>
-          <strong>24/7</strong>
-          <span>Access</span>
+          <strong id="heroApplications">0</strong>
+          <span>Applications</span>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -103,186 +120,246 @@
 <section class="section" id="about">
   <div class="container">
 
-    <div class="section-heading">
-      <span class="eyebrow">ABOUT TOP.FATMEYN</span>
-      <h2>A digital platform built for growth.</h2>
+    <div class="section-head">
+      <span class="eyebrow">ABOUT</span>
+
+      <h2>
+        Built to grow with you.
+      </h2>
+
       <p>
-        Our goal is to create a professional online environment where
-        people can learn practical technology skills, build projects
-        and discover useful digital opportunities.
+        A professional digital space for learning,
+        projects, resources and future opportunities.
       </p>
     </div>
 
-    <div class="about-grid">
 
-      <div class="about-card">
-        <span class="card-icon">01</span>
+    <div class="three-grid">
+
+      <article class="info-card">
+        <span>01</span>
         <h3>Learn</h3>
         <p>
-          Access practical digital learning materials and structured courses.
+          Follow practical digital courses and track
+          your lesson progress.
         </p>
-      </div>
+      </article>
 
-      <div class="about-card">
-        <span class="card-icon">02</span>
+      <article class="info-card">
+        <span>02</span>
         <h3>Build</h3>
         <p>
-          Turn knowledge into projects and real digital experiences.
+          Turn skills into practical projects and
+          useful digital experiences.
         </p>
-      </div>
+      </article>
 
-      <div class="about-card">
-        <span class="card-icon">03</span>
+      <article class="info-card">
+        <span>03</span>
         <h3>Grow</h3>
         <p>
-          Follow your progress and prepare for future opportunities.
+          Keep your learning, applications and
+          achievements organised.
         </p>
-      </div>
+      </article>
 
     </div>
+
   </div>
 </section>
 
 
 <!-- SERVICES -->
-<section class="section section-dark" id="services">
+<section class="section muted" id="services">
   <div class="container">
 
-    <div class="section-heading light">
+    <div class="section-head">
       <span class="eyebrow">SERVICES</span>
-      <h2>Useful digital services.</h2>
-      <p>
-        The platform is designed to grow with more services and resources over time.
-      </p>
+      <h2>What the platform provides.</h2>
     </div>
 
-    <div class="card-grid">
 
-      <article class="feature-card">
-        <div class="feature-number">01</div>
+    <div class="three-grid">
+
+      <article class="service-card">
+        <div class="service-icon">▣</div>
+
         <h3>Digital Resources</h3>
+
         <p>
-          Useful learning materials, guides and digital resources.
+          Useful guides, tools and learning resources.
         </p>
-        <button class="outline-btn service-btn"
-          data-title="Digital Resources"
-          data-text="Access useful digital resources, guides and learning materials through the platform.">
-          View Details
+
+        <button
+          class="text-btn"
+          onclick="showInfo(
+          'Digital Resources',
+          'TOP.FATMEYN can provide guides, notes, useful tools, downloads and practical digital resources here.'
+          )">
+          View details →
         </button>
       </article>
 
-      <article class="feature-card">
-        <div class="feature-number">02</div>
+
+      <article class="service-card">
+        <div class="service-icon">⌘</div>
+
         <h3>Project Building</h3>
+
         <p>
-          Practical projects designed to help turn ideas into working results.
+          Practical projects that turn learning into experience.
         </p>
-        <button class="outline-btn service-btn"
-          data-title="Project Building"
-          data-text="Build practical projects and develop experience through real digital work.">
-          View Details
+
+        <button
+          class="text-btn"
+          onclick="showInfo(
+          'Project Building',
+          'This area can later contain project briefs, project progress, showcases and practical challenges.'
+          )">
+          View details →
         </button>
       </article>
 
-      <article class="feature-card">
-        <div class="feature-number">03</div>
+
+      <article class="service-card">
+        <div class="service-icon">◉</div>
+
         <h3>Digital Support</h3>
+
         <p>
-          Guidance and support for technology-related learning.
+          A place for support and future opportunities.
         </p>
-        <button class="outline-btn service-btn"
-          data-title="Digital Support"
-          data-text="Get guidance around digital skills, projects and technology learning.">
-          View Details
+
+        <button
+          class="text-btn"
+          onclick="showInfo(
+          'Digital Support',
+          'Future versions can connect support requests, FAQs, events and other digital services.'
+          )">
+          View details →
         </button>
       </article>
 
     </div>
+
   </div>
 </section>
 
 
 <!-- PROGRAMS -->
 <section class="section" id="programs">
+
   <div class="container">
 
-    <div class="section-heading">
+    <div class="section-head">
       <span class="eyebrow">PROGRAMS</span>
-      <h2>Choose an area to explore.</h2>
-      <p>
-        More programs can be added as TOP.FATMEYN grows.
-      </p>
+      <h2>Choose a direction.</h2>
     </div>
 
-    <div class="program-grid">
+
+    <div class="three-grid">
 
       <article class="program-card">
-        <span>TECHNOLOGY</span>
+
+        <span class="tag">TECH</span>
+
         <h3>Web Development</h3>
+
         <p>
-          Learn the foundations of creating websites and digital interfaces.
+          HTML, CSS, JavaScript and practical website building.
         </p>
-        <button class="text-btn program-btn"
-          data-title="Web Development"
-          data-text="Learn HTML, CSS, JavaScript and practical website development.">
-          Explore →
+
+        <button
+          class="btn small"
+          onclick="showInfo(
+          'Web Development',
+          'Learn the foundations of modern websites through practical lessons and projects.'
+          )">
+          View Program
         </button>
+
       </article>
 
+
       <article class="program-card">
-        <span>AI</span>
+
+        <span class="tag">AI</span>
+
         <h3>AI & Automation</h3>
+
         <p>
-          Explore AI tools, prompting and practical digital workflows.
+          AI basics, prompting and practical digital workflows.
         </p>
-        <button class="text-btn program-btn"
-          data-title="AI & Automation"
-          data-text="Learn the basics of AI tools, prompt writing and useful automation workflows.">
-          Explore →
+
+        <button
+          class="btn small"
+          onclick="showInfo(
+          'AI & Automation',
+          'Learn AI concepts, prompting and practical productivity workflows.'
+          )">
+          View Program
         </button>
+
       </article>
 
+
       <article class="program-card">
-        <span>DIGITAL</span>
+
+        <span class="tag">DIGITAL</span>
+
         <h3>Cyber & Digital Skills</h3>
+
         <p>
-          Develop useful digital knowledge and online safety awareness.
+          Online safety, digital tools and responsible technology use.
         </p>
-        <button class="text-btn program-btn"
-          data-title="Cyber & Digital Skills"
-          data-text="Build digital skills, understand online safety and improve technology awareness.">
-          Explore →
+
+        <button
+          class="btn small"
+          onclick="showInfo(
+          'Cyber & Digital Skills',
+          'Build foundational digital safety and technology skills for everyday online work.'
+          )">
+          View Program
         </button>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
 
 
 <!-- DASHBOARD -->
-<section class="section section-soft" id="dashboard">
+<section class="section muted" id="dashboard">
+
   <div class="container">
 
-    <div class="section-heading">
+    <div class="section-head">
       <span class="eyebrow">MY SPACE</span>
-      <h2>Your learning dashboard.</h2>
+
+      <h2>Your personal dashboard.</h2>
+
       <p>
-        Track your learning, applications, certificates and account information.
+        Track your learning, applications and achievements.
       </p>
     </div>
+
 
     <div class="dashboard">
 
       <aside class="dashboard-sidebar">
 
         <div class="profile-mini">
-          <div class="avatar" id="avatarInitial">T</div>
+          <div class="avatar" id="avatar">T</div>
+
           <div>
-            <strong id="sideName">Demo User</strong>
-            <small id="sideEmail">demo@topfatmeyn.com</small>
+            <strong id="sideName">TOP User</strong>
+            <small>Digital learner</small>
           </div>
         </div>
+
 
         <button class="dash-tab active" data-tab="overview">
           Overview
@@ -315,156 +392,176 @@
       </aside>
 
 
-      <div class="dashboard-content">
+      <div class="dashboard-main">
 
         <!-- OVERVIEW -->
-        <div class="dash-page active" id="tab-overview">
+        <div class="dashboard-panel active" id="tab-overview">
 
-          <div class="dash-top">
+          <div class="panel-title">
             <div>
               <span class="eyebrow">OVERVIEW</span>
-              <h3>Welcome to your space.</h3>
+              <h3>Welcome back.</h3>
             </div>
 
-            <span class="online-badge">● Active</span>
+            <a href="#courses" class="btn small">
+              Browse Courses
+            </a>
           </div>
 
-          <div class="dashboard-stats">
 
-            <div class="stat-box">
-              <strong id="courseCount">0</strong>
+          <div class="stat-grid">
+
+            <div class="stat">
               <span>Courses</span>
+              <strong id="statCourses">0</strong>
             </div>
 
-            <div class="stat-box">
-              <strong id="lessonCount">0</strong>
+            <div class="stat">
               <span>Lessons Done</span>
+              <strong id="statLessons">0</strong>
             </div>
 
-            <div class="stat-box">
-              <strong id="applicationCount">0</strong>
+            <div class="stat">
               <span>Applications</span>
+              <strong id="statApplications">0</strong>
             </div>
 
-            <div class="stat-box">
-              <strong id="certificateCount">0</strong>
+            <div class="stat">
               <span>Certificates</span>
+              <strong id="statCertificates">0</strong>
             </div>
 
           </div>
 
-          <div class="dashboard-message">
-            <h4>Continue your journey</h4>
+
+          <div class="progress-card">
+
+            <div class="progress-heading">
+              <strong>Overall learning progress</strong>
+              <b id="overallPercent">0%</b>
+            </div>
+
+            <div class="progress">
+              <i id="overallBar"></i>
+            </div>
+
             <p>
-              Open the Courses section and enroll in a course to start tracking
-              your learning progress.
+              Complete lessons from your courses to increase
+              your progress.
             </p>
 
-            <a href="#courses" class="btn btn-primary">Browse Courses</a>
           </div>
 
         </div>
 
 
         <!-- PROFILE -->
-        <div class="dash-page" id="tab-profile">
+        <div class="dashboard-panel" id="tab-profile">
 
-          <span class="eyebrow">PROFILE</span>
-          <h3>Account information</h3>
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">PROFILE</span>
+              <h3>Your details</h3>
+            </div>
+          </div>
+
 
           <form id="profileForm" class="form-grid">
 
             <label>
-              Full Name
-              <input id="profileName" type="text"
-                placeholder="Your full name">
+              Full name
+              <input id="profileName" required>
             </label>
 
             <label>
               Email
-              <input id="profileEmail" type="email"
-                placeholder="Your email">
+              <input id="profileEmail" type="email">
             </label>
 
             <label class="full">
-              About You
-              <textarea id="profileAbout"
-                placeholder="Tell us something about yourself"></textarea>
+              About you
+              <textarea id="profileAbout" rows="5"></textarea>
             </label>
 
-            <button class="btn btn-primary" type="submit">
+            <button class="btn primary" type="submit">
               Save Profile
             </button>
 
           </form>
 
-          <p class="save-message" id="profileMessage"></p>
-
         </div>
 
 
         <!-- LEARNING -->
-        <div class="dash-page" id="tab-learning">
+        <div class="dashboard-panel" id="tab-learning">
 
-          <span class="eyebrow">MY LEARNING</span>
-          <h3>Your courses</h3>
-
-          <div id="myLearningList" class="learning-list">
-            <div class="empty-state">
-              No courses enrolled yet.
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">MY LEARNING</span>
+              <h3>Course progress</h3>
             </div>
           </div>
+
+          <div id="myLearning"></div>
 
         </div>
 
 
         <!-- APPLICATIONS -->
-        <div class="dash-page" id="tab-applications">
+        <div class="dashboard-panel" id="tab-applications">
 
-          <span class="eyebrow">APPLICATIONS</span>
-          <h3>Application history</h3>
-
-          <div id="applicationHistory">
-            <div class="empty-state">
-              No applications submitted yet.
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">APPLICATIONS</span>
+              <h3>Application history</h3>
             </div>
           </div>
+
+          <div id="applicationHistory"></div>
 
         </div>
 
 
         <!-- CERTIFICATES -->
-        <div class="dash-page" id="tab-certificates">
+        <div class="dashboard-panel" id="tab-certificates">
 
-          <span class="eyebrow">CERTIFICATES</span>
-          <h3>Your certificates</h3>
-
-          <div id="certificateList">
-            <div class="empty-state">
-              Certificates will appear here after eligible courses are completed.
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">CERTIFICATES</span>
+              <h3>Your certificates</h3>
             </div>
+          </div>
+
+          <div id="certificateArea" class="empty-box">
+            Certificates will appear here when eligible courses
+            are completed.
           </div>
 
         </div>
 
 
         <!-- NOTIFICATIONS -->
-        <div class="dash-page" id="tab-notifications">
+        <div class="dashboard-panel" id="tab-notifications">
 
-          <span class="eyebrow">NOTIFICATIONS</span>
-          <h3>Updates</h3>
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">NOTIFICATIONS</span>
+              <h3>Updates</h3>
+            </div>
+          </div>
 
-          <div class="notification">
-            <strong>Welcome to TOP.FATMEYN.</strong>
+          <div class="notice">
+            <strong>Welcome to V14</strong>
             <p>
-              Your V13 digital learning space is ready.
+              Your dashboard and course progress system are ready.
             </p>
           </div>
 
-          <div class="notification">
-            <strong>New courses can be added.</strong>
+          <div class="notice">
+            <strong>Keep learning</strong>
             <p>
-              Check the Course Centre regularly for new learning content.
+              Open a course and complete lessons to update
+              your progress.
             </p>
           </div>
 
@@ -472,273 +569,208 @@
 
 
         <!-- SETTINGS -->
-        <div class="dash-page" id="tab-settings">
+        <div class="dashboard-panel" id="tab-settings">
 
-          <span class="eyebrow">SETTINGS</span>
-          <h3>Account settings</h3>
+          <div class="panel-title">
+            <div>
+              <span class="eyebrow">SETTINGS</span>
+              <h3>Demo controls</h3>
+            </div>
+          </div>
 
-          <p>
-            Your demo learning data is stored locally in this browser.
-          </p>
-
-          <button class="danger-btn" id="resetData">
+          <button class="btn danger" id="resetData">
             Reset Demo Data
           </button>
+
+          <p class="hint">
+            This clears profile, courses, progress and applications
+            stored in this browser.
+          </p>
 
         </div>
 
       </div>
+
     </div>
 
   </div>
+
 </section>
 
 
 <!-- COURSES -->
 <section class="section" id="courses">
+
   <div class="container">
 
-    <div class="section-heading">
+    <div class="section-head">
       <span class="eyebrow">COURSE CENTRE</span>
-      <h2>Start learning today.</h2>
+
+      <h2>Learn at your pace.</h2>
+
       <p>
-        Choose a course and follow your progress lesson by lesson.
+        Open a course, enrol and complete lessons.
       </p>
     </div>
 
-    <div class="course-grid">
 
-      <article class="course-card">
+    <div class="course-grid" id="courseGrid"></div>
 
-        <div class="course-top">
-          <span class="course-tag">TECH</span>
-          <span>4 Lessons</span>
-        </div>
-
-        <h3>Web Development Basics</h3>
-
-        <p>
-          Learn the foundations of modern website development.
-        </p>
-
-        <div class="course-progress">
-          <div class="progress-bar">
-            <span id="progress-web"></span>
-          </div>
-          <small id="progress-web-text">0% complete</small>
-        </div>
-
-        <button class="btn btn-primary course-btn"
-          data-course="web">
-          Open Course
-        </button>
-
-      </article>
-
-
-      <article class="course-card">
-
-        <div class="course-top">
-          <span class="course-tag">DIGITAL</span>
-          <span>4 Lessons</span>
-        </div>
-
-        <h3>Digital Skills</h3>
-
-        <p>
-          Build practical digital knowledge for everyday technology.
-        </p>
-
-        <div class="course-progress">
-          <div class="progress-bar">
-            <span id="progress-digital"></span>
-          </div>
-          <small id="progress-digital-text">0% complete</small>
-        </div>
-
-        <button class="btn btn-primary course-btn"
-          data-course="digital">
-          Open Course
-        </button>
-
-      </article>
-
-
-      <article class="course-card">
-
-        <div class="course-top">
-          <span class="course-tag">AI</span>
-          <span>4 Lessons</span>
-        </div>
-
-        <h3>AI Tools</h3>
-
-        <p>
-          Learn AI basics, prompting and practical AI workflows.
-        </p>
-
-        <div class="course-progress">
-          <div class="progress-bar">
-            <span id="progress-ai"></span>
-          </div>
-          <small id="progress-ai-text">0% complete</small>
-        </div>
-
-        <button class="btn btn-primary course-btn"
-          data-course="ai">
-          Open Course
-        </button>
-
-      </article>
-
-    </div>
   </div>
+
 </section>
 
 
 <!-- NEWS -->
-<section class="section section-dark" id="news">
+<section class="section muted" id="news">
+
   <div class="container">
 
-    <div class="section-heading light">
-      <span class="eyebrow">NEWS & UPDATES</span>
-      <h2>What's happening.</h2>
-      <p>
-        Future platform updates, learning announcements and events can appear here.
-      </p>
+    <div class="section-head">
+      <span class="eyebrow">NEWS</span>
+      <h2>Platform updates.</h2>
     </div>
 
-    <div class="news-grid">
+
+    <div class="three-grid">
 
       <article class="news-card">
-        <span>PLATFORM</span>
-        <h3>TOP.FATMEYN V13</h3>
+        <span>V14</span>
+        <h3>Personal Dashboard</h3>
         <p>
-          The platform now includes a learning dashboard and course progress system.
+          Track your courses, lessons and applications.
         </p>
       </article>
 
       <article class="news-card">
-        <span>LEARNING</span>
-        <h3>New Courses</h3>
+        <span>ROADMAP</span>
+        <h3>More Digital Services</h3>
         <p>
-          More technology and digital courses can be added as the platform grows.
+          More resources and services can be added as
+          the platform grows.
         </p>
       </article>
 
       <article class="news-card">
-        <span>FUTURE</span>
-        <h3>More Features Ahead</h3>
+        <span>BUILD</span>
+        <h3>Practical Projects</h3>
         <p>
-          Applications, certificates, accounts and additional services can grow with the platform.
+          Turn learning into useful digital projects.
         </p>
       </article>
 
     </div>
 
   </div>
+
 </section>
 
 
 <!-- APPLY -->
-<section class="section" id="apply">
+<section class="section apply-section" id="apply">
+
   <div class="container">
 
-    <div class="application-layout">
+    <div class="section-head">
+      <span class="eyebrow">APPLICATIONS</span>
 
-      <div class="section-heading">
-        <span class="eyebrow">APPLICATIONS</span>
-        <h2>Start your next step.</h2>
-        <p>
-          Send your request directly through WhatsApp and keep a record
-          in your dashboard.
-        </p>
+      <h2>Start your next step.</h2>
 
-        <div class="apply-note">
-          <strong>How it works</strong>
-          <ol>
-            <li>Fill in your details.</li>
-            <li>Select what you are interested in.</li>
-            <li>Send your request.</li>
-          </ol>
-        </div>
-      </div>
+      <p>
+        Send your request through WhatsApp.
+      </p>
+    </div>
 
 
-      <form id="applicationForm" class="application-form">
+    <form id="applyForm" class="apply-form">
+
+      <div class="form-grid">
 
         <label>
-          Full Name
-          <input id="appName" type="text"
-            placeholder="Enter your name" required>
+          Full name
+          <input id="applyName" required placeholder="Your name">
         </label>
 
         <label>
-          What are you interested in?
-          <select id="appInterest" required>
-            <option value="">Select an option</option>
+          Interest
+
+          <select id="applyInterest">
+
             <option>Web Development</option>
             <option>AI & Automation</option>
             <option>Cyber & Digital Skills</option>
-            <option>Creative Technology</option>
             <option>Digital Resources</option>
             <option>General enquiry</option>
+
           </select>
+
         </label>
 
-        <label>
-          Message
-          <textarea id="appMessage"
-            placeholder="Write your request..." required></textarea>
-        </label>
+      </div>
 
-        <button class="btn btn-primary" type="submit">
-          Send Application
-        </button>
 
-        <small>
-          Your request will open in WhatsApp.
-        </small>
+      <label>
+        Message
 
-      </form>
+        <textarea
+          id="applyMessage"
+          rows="5"
+          required
+          placeholder="Write your request..."
+        ></textarea>
 
-    </div>
+      </label>
+
+
+      <button class="btn primary" type="submit">
+        Send Application via WhatsApp
+      </button>
+
+    </form>
 
   </div>
+
 </section>
 
 
 <!-- CONTACT -->
-<section class="section section-soft" id="contact">
+<section class="section" id="contact">
+
   <div class="container">
 
-    <div class="section-heading">
+    <div class="section-head">
       <span class="eyebrow">CONTACT</span>
-      <h2>Connect with TOP.FATMEYN.</h2>
-      <p>
-        Follow the platform and get in touch.
-      </p>
+      <h2>Stay connected.</h2>
     </div>
+
 
     <div class="contact-grid">
 
-      <a class="contact-card"
+      <a
         href="https://wa.me/255670675916"
-        target="_blank">
+        target="_blank"
+        class="contact-card"
+      >
         <strong>WhatsApp</strong>
         <span>+255 670 675 916</span>
       </a>
 
-      <a class="contact-card"
+
+      <a
         href="https://www.tiktok.com/@____yk4x"
-        target="_blank">
+        target="_blank"
+        class="contact-card"
+      >
         <strong>TikTok</strong>
         <span>@____yk4x</span>
       </a>
 
-      <a class="contact-card"
+
+      <a
         href="https://www.instagram.com/____yk4x"
-        target="_blank">
+        target="_blank"
+        class="contact-card"
+      >
         <strong>Instagram</strong>
         <span>@____yk4x</span>
       </a>
@@ -746,180 +778,89 @@
     </div>
 
   </div>
+
 </section>
 
 </main>
 
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-grid">
-
+<footer>
+  <div class="container footer-row">
     <div>
       <strong>TOP.FATMEYN</strong>
       <p>Digital Platform</p>
     </div>
 
-    <div>
-      <span>© 2026 TOP.FATMEYN. All rights reserved.</span>
-    </div>
-
+    <span>
+      © 2026 TOP.FATMEYN • V14
+    </span>
   </div>
 </footer>
 
 
-<!-- SERVICE / PROGRAM MODAL -->
+<!-- INFO MODAL -->
 <div class="modal" id="infoModal">
-  <div class="modal-box">
 
-    <button class="modal-close" id="modalClose">×</button>
+  <div class="modal-card">
+
+    <button class="close" onclick="closeInfo()">×</button>
 
     <span class="eyebrow">TOP.FATMEYN</span>
-    <h2 id="modalTitle">Details</h2>
-    <p id="modalText"></p>
 
-    <button class="btn btn-primary" id="modalAction">
-      Continue
-    </button>
+    <h3 id="infoTitle"></h3>
+
+    <p id="infoText"></p>
 
   </div>
+
 </div>
 
 
 <!-- COURSE MODAL -->
 <div class="modal" id="courseModal">
 
-  <div class="modal-box course-viewer">
+  <div class="modal-card course-viewer">
 
-    <button class="modal-close" id="courseClose">×</button>
+    <button class="close" onclick="closeCourse()">×</button>
 
-    <span class="eyebrow" id="courseLabel">COURSE</span>
+    <span class="eyebrow">COURSE VIEWER</span>
 
-    <h2 id="courseTitle">Course</h2>
+    <h3 id="courseTitle"></h3>
 
     <p id="courseDescription"></p>
 
-    <div class="lesson-list" id="lessonList"></div>
+    <div id="lessonList"></div>
 
-    <div class="course-viewer-actions">
-      <button class="btn btn-primary" id="saveCourseProgress">
-        Save Progress
-      </button>
+    <div class="viewer-progress">
 
-      <span id="courseProgressMessage"></span>
+      <div class="progress-heading">
+        <strong>Course progress</strong>
+        <b id="coursePercent">0%</b>
+      </div>
+
+      <div class="progress">
+        <i id="courseBar"></i>
+      </div>
+
     </div>
 
   </div>
+
 </div>
 
 
 <script>
-/* =========================================
-   TOP.FATMEYN V13
-   Local demo learning system
-========================================= */
 
-const STORAGE_KEY = "topfatmeyn_v13";
+const STORAGE_KEY = "topfatmeyn_v14";
 
-const defaultState = {
-  profile: {
-    name: "Demo User",
-    email: "demo@topfatmeyn.com",
-    about: ""
-  },
+const courses = [
 
-  courses: {
-    web: [],
-    digital: [],
-    ai: []
-  },
-
-  applications: [],
-
-  certificates: []
-};
-
-let state = JSON.parse(
-  localStorage.getItem(STORAGE_KEY) ||
-  JSON.stringify(defaultState)
-);
-
-
-/* SAVE STATE */
-
-function saveState() {
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify(state)
-  );
-}
-
-
-/* MOBILE MENU */
-
-const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
-
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-  });
-}
-
-document.querySelectorAll("#mainNav a").forEach(link => {
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
-  });
-});
-
-
-/* INFO MODAL */
-
-const infoModal = document.getElementById("infoModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalText = document.getElementById("modalText");
-const modalClose = document.getElementById("modalClose");
-
-function openInfoModal(title, text) {
-  modalTitle.textContent = title;
-  modalText.textContent = text;
-  infoModal.classList.add("show");
-}
-
-document.querySelectorAll(".service-btn, .program-btn")
-.forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    openInfoModal(
-      button.dataset.title,
-      button.dataset.text
-    );
-
-  });
-
-});
-
-modalClose.addEventListener("click", () => {
-  infoModal.classList.remove("show");
-});
-
-infoModal.addEventListener("click", e => {
-  if (e.target === infoModal) {
-    infoModal.classList.remove("show");
-  }
-});
-
-
-/* COURSE DATA */
-
-const courses = {
-
-  web: {
+  {
+    id: "web",
     title: "Web Development Basics",
-    label: "TECHNOLOGY",
+    tag: "TECH",
     description:
-      "Learn the foundations of creating modern websites.",
+      "Build a strong foundation in modern website development.",
     lessons: [
       "HTML foundations",
       "CSS styling",
@@ -928,11 +869,12 @@ const courses = {
     ]
   },
 
-  digital: {
+  {
+    id: "digital",
     title: "Digital Skills",
-    label: "DIGITAL",
+    tag: "DIGITAL",
     description:
-      "Build useful digital skills for everyday technology.",
+      "Practical skills for safer and more productive digital work.",
     lessons: [
       "Digital tools",
       "Online safety",
@@ -941,11 +883,12 @@ const courses = {
     ]
   },
 
-  ai: {
+  {
+    id: "ai",
     title: "AI Tools",
-    label: "AI",
+    tag: "AI",
     description:
-      "Learn AI basics, prompting and practical workflows.",
+      "Understand AI basics and build useful everyday workflows.",
     lessons: [
       "AI basics",
       "Prompt writing",
@@ -954,636 +897,888 @@ const courses = {
     ]
   }
 
-};
+];
 
 
-/* COURSE MODAL */
+let state =
+  JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
 
-const courseModal = document.getElementById("courseModal");
-const courseClose = document.getElementById("courseClose");
-const courseTitle = document.getElementById("courseTitle");
-const courseLabel = document.getElementById("courseLabel");
-const courseDescription =
-  document.getElementById("courseDescription");
-const lessonList =
-  document.getElementById("lessonList");
+    profile: {
+      name: "TOP User",
+      email: "",
+      about: ""
+    },
 
-let currentCourse = null;
+    enrolled: [],
+
+    completed: {},
+
+    applications: []
+
+  };
 
 
-function openCourse(courseId) {
+function saveState() {
 
-  currentCourse = courseId;
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(state)
+  );
 
-  const course = courses[courseId];
+}
 
-  courseTitle.textContent = course.title;
-  courseLabel.textContent = course.label;
-  courseDescription.textContent = course.description;
+
+function getCourse(id) {
+
+  return courses.find(
+    course => course.id === id
+  );
+
+}
+
+
+function coursePercent(id) {
+
+  const course = getCourse(id);
+
+  if (!course) return 0;
 
   const completed =
-    state.courses[courseId] || [];
+    state.completed[id] || [];
 
-  lessonList.innerHTML = "";
-
-  course.lessons.forEach((lesson, index) => {
-
-    const checked =
-      completed.includes(index);
-
-    const row = document.createElement("label");
-
-    row.className = "lesson-row";
-
-    row.innerHTML = `
-      <input
-        type="checkbox"
-        value="${index}"
-        ${checked ? "checked" : ""}
-      >
-
-      <span>
-        Lesson ${index + 1}: ${lesson}
-      </span>
-    `;
-
-    lessonList.appendChild(row);
-
-  });
-
-  document.getElementById(
-    "courseProgressMessage"
-  ).textContent = "";
-
-  courseModal.classList.add("show");
-
-  document.body.classList.add("modal-open");
-}
-
-
-document.querySelectorAll(".course-btn")
-.forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    openCourse(
-      button.dataset.course
-    );
-
-  });
-
-});
-
-
-courseClose.addEventListener("click", () => {
-
-  courseModal.classList.remove("show");
-
-  document.body.classList.remove("modal-open");
-
-});
-
-
-courseModal.addEventListener("click", e => {
-
-  if (e.target === courseModal) {
-
-    courseModal.classList.remove("show");
-
-    document.body.classList.remove("modal-open");
-
-  }
-
-});
-
-
-/* SAVE COURSE PROGRESS */
-
-document.getElementById(
-  "saveCourseProgress"
-).addEventListener("click", () => {
-
-  if (!currentCourse) return;
-
-  const checked = [];
-
-  lessonList
-    .querySelectorAll("input[type='checkbox']")
-    .forEach(input => {
-
-      if (input.checked) {
-        checked.push(Number(input.value));
-      }
-
-    });
-
-  state.courses[currentCourse] = checked;
-
-  saveState();
-
-  updateDashboard();
-
-  updateCourseProgress();
-
-  document.getElementById(
-    "courseProgressMessage"
-  ).textContent =
-    "Progress saved ✓";
-
-});
-
-
-/* COURSE PROGRESS */
-
-function updateCourseProgress() {
-
-  Object.keys(courses).forEach(id => {
-
-    const total =
-      courses[id].lessons.length;
-
-    const done =
-      state.courses[id]?.length || 0;
-
-    const percentage =
-      Math.round((done / total) * 100);
-
-    const bar =
-      document.getElementById(
-        `progress-${id}`
-      );
-
-    const text =
-      document.getElementById(
-        `progress-${id}-text`
-      );
-
-    if (bar) {
-      bar.style.width =
-        percentage + "%";
-    }
-
-    if (text) {
-      text.textContent =
-        percentage + "% complete";
-    }
-
-  });
+  return Math.round(
+    completed.length /
+    course.lessons.length *
+    100
+  );
 
 }
 
 
-/* DASHBOARD TABS */
+function overallPercent() {
 
-const dashTabs =
-  document.querySelectorAll(".dash-tab");
+  if (!state.enrolled.length) return 0;
 
-const dashPages =
-  document.querySelectorAll(".dash-page");
+  let total = 0;
 
-
-dashTabs.forEach(tab => {
-
-  tab.addEventListener("click", () => {
-
-    dashTabs.forEach(t =>
-      t.classList.remove("active")
-    );
-
-    dashPages.forEach(page =>
-      page.classList.remove("active")
-    );
-
-    tab.classList.add("active");
-
-    const target =
-      document.getElementById(
-        "tab-" + tab.dataset.tab
-      );
-
-    if (target) {
-      target.classList.add("active");
-    }
-
-    updateDashboard();
-
+  state.enrolled.forEach(id => {
+    total += coursePercent(id);
   });
 
-});
-
-
-/* PROFILE */
-
-function loadProfile() {
-
-  document.getElementById(
-    "profileName"
-  ).value =
-    state.profile.name || "";
-
-  document.getElementById(
-    "profileEmail"
-  ).value =
-    state.profile.email || "";
-
-  document.getElementById(
-    "profileAbout"
-  ).value =
-    state.profile.about || "";
+  return Math.round(
+    total /
+    state.enrolled.length
+  );
 
 }
 
 
-document.getElementById(
-  "profileForm"
-).addEventListener("submit", e => {
+function totalLessonsDone() {
 
-  e.preventDefault();
+  let total = 0;
 
-  state.profile.name =
-    document.getElementById(
-      "profileName"
-    ).value.trim() || "Demo User";
+  Object.values(
+    state.completed
+  ).forEach(list => {
+    total += list.length;
+  });
 
-  state.profile.email =
-    document.getElementById(
-      "profileEmail"
-    ).value.trim() ||
-    "demo@topfatmeyn.com";
+  return total;
 
-  state.profile.about =
-    document.getElementById(
-      "profileAbout"
-    ).value.trim();
-
-  saveState();
-
-  updateDashboard();
-
-  document.getElementById(
-    "profileMessage"
-  ).textContent =
-    "Profile saved successfully ✓";
-
-});
+}
 
 
-/* DASHBOARD UPDATE */
-
-function updateDashboard() {
+function renderDashboard() {
 
   const name =
-    state.profile.name || "Demo User";
-
-  const email =
-    state.profile.email ||
-    "demo@topfatmeyn.com";
+    state.profile.name || "TOP User";
 
   document.getElementById(
     "sideName"
   ).textContent = name;
 
   document.getElementById(
-    "sideEmail"
-  ).textContent = email;
-
-  document.getElementById(
-    "avatarInitial"
+    "avatar"
   ).textContent =
     name.charAt(0).toUpperCase();
 
-  let enrolled = 0;
-  let lessonsDone = 0;
 
-  Object.keys(state.courses)
-  .forEach(id => {
-
-    const completed =
-      state.courses[id] || [];
-
-    if (completed.length > 0) {
-      enrolled++;
-    }
-
-    lessonsDone +=
-      completed.length;
-
-  });
+  document.getElementById(
+    "profileName"
+  ).value =
+    state.profile.name || "";
 
 
   document.getElementById(
-    "courseCount"
-  ).textContent = enrolled;
+    "profileEmail"
+  ).value =
+    state.profile.email || "";
+
 
   document.getElementById(
-    "lessonCount"
-  ).textContent = lessonsDone;
+    "profileAbout"
+  ).value =
+    state.profile.about || "";
+
 
   document.getElementById(
-    "applicationCount"
+    "statCourses"
+  ).textContent =
+    state.enrolled.length;
+
+
+  document.getElementById(
+    "statLessons"
+  ).textContent =
+    totalLessonsDone();
+
+
+  document.getElementById(
+    "statApplications"
   ).textContent =
     state.applications.length;
 
+
+  const certificates =
+    state.enrolled.filter(
+      id => coursePercent(id) === 100
+    ).length;
+
+
   document.getElementById(
-    "certificateCount"
+    "statCertificates"
   ).textContent =
-    state.certificates.length;
+    certificates;
 
 
-  updateLearningList();
+  const overall =
+    overallPercent();
 
-  updateApplications();
 
-  updateCertificates();
+  document.getElementById(
+    "overallPercent"
+  ).textContent =
+    overall + "%";
+
+
+  document.getElementById(
+    "overallBar"
+  ).style.width =
+    overall + "%";
+
+
+  document.getElementById(
+    "heroCourses"
+  ).textContent =
+    state.enrolled.length;
+
+
+  document.getElementById(
+    "heroProgress"
+  ).textContent =
+    overall + "%";
+
+
+  document.getElementById(
+    "heroApplications"
+  ).textContent =
+    state.applications.length;
+
+
+  renderLearning();
+
+  renderApplications();
+
+  renderCertificates();
 
 }
 
 
-/* MY LEARNING */
+function renderLearning() {
 
-function updateLearningList() {
-
-  const container =
+  const box =
     document.getElementById(
-      "myLearningList"
+      "myLearning"
     );
 
-  const enrolled =
-    Object.keys(courses)
-    .filter(id =>
-      (state.courses[id] || []).length > 0
-    );
 
-  if (!enrolled.length) {
+  if (!state.enrolled.length) {
 
-    container.innerHTML =
-      `<div class="empty-state">
-        No courses enrolled yet.
-      </div>`;
-
-    return;
-  }
-
-
-  container.innerHTML = enrolled.map(id => {
-
-    const course = courses[id];
-
-    const done =
-      state.courses[id].length;
-
-    const total =
-      course.lessons.length;
-
-    const percentage =
-      Math.round(
-        (done / total) * 100
-      );
-
-    return `
-      <div class="learning-item">
-
-        <div>
-          <strong>${course.title}</strong>
-          <small>
-            ${done}/${total} lessons completed
-          </small>
-        </div>
-
-        <div class="mini-progress">
-          <span style="width:${percentage}%"></span>
-        </div>
-
-        <b>${percentage}%</b>
-
+    box.innerHTML = `
+      <div class="empty-box">
+        You have not enrolled in a course yet.
+        Open Course Centre and choose a course.
       </div>
     `;
 
-  }).join("");
+    return;
+
+  }
+
+
+  box.innerHTML =
+    state.enrolled.map(id => {
+
+      const course =
+        getCourse(id);
+
+      const percent =
+        coursePercent(id);
+
+      return `
+
+        <div class="learning-row">
+
+          <div>
+            <strong>
+              ${course.title}
+            </strong>
+
+            <small>
+              ${percent}% complete
+            </small>
+          </div>
+
+          <div class="learning-actions">
+
+            <div class="progress">
+              <i style="width:${percent}%"></i>
+            </div>
+
+            <button
+              class="btn small"
+              onclick="openCourse('${id}')"
+            >
+              Continue
+            </button>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }).join("");
 
 }
 
 
-/* APPLICATIONS */
+function renderApplications() {
 
-function updateApplications() {
-
-  const container =
+  const box =
     document.getElementById(
       "applicationHistory"
     );
 
+
   if (!state.applications.length) {
 
-    container.innerHTML =
-      `<div class="empty-state">
-        No applications submitted yet.
-      </div>`;
+    box.innerHTML = `
+      <div class="empty-box">
+        No applications yet.
+      </div>
+    `;
 
     return;
+
   }
 
 
-  container.innerHTML =
+  box.innerHTML =
     state.applications
-    .slice()
-    .reverse()
-    .map(app => `
+      .slice()
+      .reverse()
+      .map(app => `
 
-      <div class="application-item">
+        <div class="application-row">
 
-        <div>
-          <strong>${escapeHTML(app.name)}</strong>
+          <div>
+            <strong>
+              ${app.interest}
+            </strong>
 
-          <small>
-            ${escapeHTML(app.interest)}
-          </small>
+            <small>
+              ${app.date}
+            </small>
+          </div>
 
-          <p>
-            ${escapeHTML(app.message)}
-          </p>
+          <span>
+            Received
+          </span>
+
         </div>
 
-        <span class="application-status">
-          Sent
-        </span>
-
-      </div>
-
-    `)
-    .join("");
+      `)
+      .join("");
 
 }
 
 
-/* CERTIFICATES */
+function renderCertificates() {
 
-function updateCertificates() {
-
-  const container =
+  const box =
     document.getElementById(
-      "certificateList"
+      "certificateArea"
     );
 
-  if (!state.certificates.length) {
 
-    container.innerHTML =
-      `<div class="empty-state">
-        Certificates will appear here after eligible courses are completed.
-      </div>`;
+  const completed =
+    state.enrolled.filter(
+      id => coursePercent(id) === 100
+    );
+
+
+  if (!completed.length) {
+
+    box.innerHTML = `
+      Certificates will appear here
+      when you complete an eligible course.
+    `;
 
     return;
+
   }
 
 
-  container.innerHTML =
-    state.certificates
-    .map(cert => `
+  box.innerHTML =
+    completed.map(id => {
 
-      <div class="certificate-item">
+      const course =
+        getCourse(id);
 
-        <strong>
-          ${escapeHTML(cert)}
-        </strong>
+      return `
 
-        <span>
-          TOP.FATMEYN
-        </span>
+        <div class="certificate-card">
 
-      </div>
+          <strong>
+            Certificate Ready
+          </strong>
 
-    `)
-    .join("");
+          <h4>
+            ${course.title}
+          </h4>
+
+          <small>
+            Course completed successfully.
+          </small>
+
+        </div>
+
+      `;
+
+    }).join("");
 
 }
 
 
-/* APPLICATION FORM */
+function renderCourses() {
+
+  const grid =
+    document.getElementById(
+      "courseGrid"
+    );
+
+
+  grid.innerHTML =
+    courses.map(course => {
+
+      const percent =
+        coursePercent(course.id);
+
+      const enrolled =
+        state.enrolled.includes(
+          course.id
+        );
+
+
+      return `
+
+        <article class="course-card">
+
+          <div class="course-top">
+
+            <span class="tag">
+              ${course.tag}
+            </span>
+
+            <b>
+              ${percent}%
+            </b>
+
+          </div>
+
+
+          <h3>
+            ${course.title}
+          </h3>
+
+
+          <p>
+            ${course.description}
+          </p>
+
+
+          <div class="progress">
+            <i style="width:${percent}%"></i>
+          </div>
+
+
+          <button
+            class="btn small"
+            onclick="openCourse('${course.id}')"
+          >
+            ${
+              enrolled
+              ? "Continue Course"
+              : "Open Course"
+            }
+          </button>
+
+        </article>
+
+      `;
+
+    }).join("");
+
+}
+
+
+function renderAll() {
+
+  renderDashboard();
+
+  renderCourses();
+
+}
+
+
+function openCourse(id) {
+
+  const course =
+    getCourse(id);
+
+
+  if (!state.enrolled.includes(id)) {
+
+    state.enrolled.push(id);
+
+    state.completed[id] =
+      state.completed[id] || [];
+
+    saveState();
+
+  }
+
+
+  const completed =
+    state.completed[id] || [];
+
+
+  document.getElementById(
+    "courseTitle"
+  ).textContent =
+    course.title;
+
+
+  document.getElementById(
+    "courseDescription"
+  ).textContent =
+    course.description;
+
+
+  document.getElementById(
+    "lessonList"
+  ).innerHTML =
+
+    course.lessons.map(
+      (lesson, index) => {
+
+        const done =
+          completed.includes(index);
+
+        return `
+
+          <button
+            class="lesson-item ${
+              done ? "completed" : ""
+            }"
+            onclick="
+              toggleLesson(
+                '${id}',
+                ${index}
+              )
+            "
+          >
+
+            <span>
+              ${done ? "✓" : "○"}
+            </span>
+
+            <div>
+              <strong>
+                Lesson ${index + 1}
+              </strong>
+
+              <small>
+                ${lesson}
+              </small>
+            </div>
+
+          </button>
+
+        `;
+
+      }
+    ).join("");
+
+
+  const percent =
+    coursePercent(id);
+
+
+  document.getElementById(
+    "coursePercent"
+  ).textContent =
+    percent + "%";
+
+
+  document.getElementById(
+    "courseBar"
+  ).style.width =
+    percent + "%";
+
+
+  document.getElementById(
+    "courseModal"
+  ).classList.add("show");
+
+}
+
+
+function toggleLesson(
+  courseId,
+  lessonIndex
+) {
+
+  const list =
+    state.completed[courseId] || [];
+
+
+  const position =
+    list.indexOf(
+      lessonIndex
+    );
+
+
+  if (position >= 0) {
+
+    list.splice(
+      position,
+      1
+    );
+
+  } else {
+
+    list.push(
+      lessonIndex
+    );
+
+  }
+
+
+  state.completed[courseId] =
+    list;
+
+
+  saveState();
+
+  renderAll();
+
+  openCourse(courseId);
+
+}
+
+
+function closeCourse() {
+
+  document.getElementById(
+    "courseModal"
+  ).classList.remove(
+    "show"
+  );
+
+}
+
+
+function showInfo(
+  title,
+  text
+) {
+
+  document.getElementById(
+    "infoTitle"
+  ).textContent =
+    title;
+
+
+  document.getElementById(
+    "infoText"
+  ).textContent =
+    text;
+
+
+  document.getElementById(
+    "infoModal"
+  ).classList.add(
+    "show"
+  );
+
+}
+
+
+function closeInfo() {
+
+  document.getElementById(
+    "infoModal"
+  ).classList.remove(
+    "show"
+  );
+
+}
+
 
 document.getElementById(
-  "applicationForm"
-).addEventListener("submit", e => {
+  "menuBtn"
+).onclick = function() {
 
-  e.preventDefault();
+  document.getElementById(
+    "mainNav"
+  ).classList.toggle(
+    "open"
+  );
+
+};
+
+
+document.querySelectorAll(
+  "#mainNav a"
+).forEach(link => {
+
+  link.onclick = function() {
+
+    document.getElementById(
+      "mainNav"
+    ).classList.remove(
+      "open"
+    );
+
+  };
+
+});
+
+
+document.querySelectorAll(
+  ".dash-tab"
+).forEach(button => {
+
+  button.onclick = function() {
+
+    document.querySelectorAll(
+      ".dash-tab"
+    ).forEach(
+      b => b.classList.remove("active")
+    );
+
+
+    document.querySelectorAll(
+      ".dashboard-panel"
+    ).forEach(
+      panel =>
+        panel.classList.remove("active")
+    );
+
+
+    button.classList.add(
+      "active"
+    );
+
+
+    document.getElementById(
+      "tab-" + button.dataset.tab
+    ).classList.add(
+      "active"
+    );
+
+  };
+
+});
+
+
+document.getElementById(
+  "profileForm"
+).onsubmit = function(event) {
+
+  event.preventDefault();
+
+
+  state.profile = {
+
+    name:
+      document.getElementById(
+        "profileName"
+      ).value.trim() ||
+      "TOP User",
+
+    email:
+      document.getElementById(
+        "profileEmail"
+      ).value.trim(),
+
+    about:
+      document.getElementById(
+        "profileAbout"
+      ).value.trim()
+
+  };
+
+
+  saveState();
+
+  renderAll();
+
+  alert(
+    "Profile saved successfully."
+  );
+
+};
+
+
+document.getElementById(
+  "applyForm"
+).onsubmit = function(event) {
+
+  event.preventDefault();
+
 
   const name =
     document.getElementById(
-      "appName"
+      "applyName"
     ).value.trim();
+
 
   const interest =
     document.getElementById(
-      "appInterest"
+      "applyInterest"
     ).value;
+
 
   const message =
     document.getElementById(
-      "appMessage"
+      "applyMessage"
     ).value.trim();
-
-
-  if (!name || !interest || !message) {
-    return;
-  }
 
 
   state.applications.push({
 
-    name,
-    interest,
-    message,
+    name: name,
+
+    interest: interest,
+
+    message: message,
 
     date:
       new Date().toLocaleString()
 
   });
 
+
+  state.profile.name =
+    name || state.profile.name;
+
+
   saveState();
 
-  updateDashboard();
+  renderAll();
 
 
-  const whatsappMessage =
-`Hello TOP.FATMEYN,
+  const whatsappText =
+    encodeURIComponent(
+      `TOP.FATMEYN Application
 
 Name: ${name}
 
 Interest: ${interest}
 
-Message:
-${message}`;
-
-
-  const whatsappURL =
-    "https://wa.me/255670675916?text=" +
-    encodeURIComponent(
-      whatsappMessage
+Message: ${message}`
     );
 
 
   window.open(
-    whatsappURL,
+    "https://wa.me/255670675916?text=" +
+    whatsappText,
     "_blank"
   );
 
 
-  document.getElementById(
-    "applicationForm"
-  ).reset();
+  event.target.reset();
 
-});
+};
 
-
-/* RESET DATA */
 
 document.getElementById(
   "resetData"
-).addEventListener("click", () => {
+).onclick = function() {
 
-  const confirmed =
+  if (
     confirm(
-      "Reset all TOP.FATMEYN demo data?"
+      "Reset all V14 demo data?"
+    )
+  ) {
+
+    localStorage.removeItem(
+      STORAGE_KEY
     );
 
-  if (!confirmed) return;
+    location.reload();
 
-  state =
-    JSON.parse(
-      JSON.stringify(defaultState)
-    );
+  }
 
-  saveState();
-
-  loadProfile();
-
-  updateDashboard();
-
-  updateCourseProgress();
-
-});
+};
 
 
-/* SECURITY HELPER */
+document.getElementById(
+  "infoModal"
+).onclick = function(event) {
 
-function escapeHTML(value) {
+  if (
+    event.target.id ===
+    "infoModal"
+  ) {
 
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    closeInfo();
 
-}
+  }
+
+};
 
 
-/* INITIAL LOAD */
+document.getElementById(
+  "courseModal"
+).onclick = function(event) {
 
-loadProfile();
+  if (
+    event.target.id ===
+    "courseModal"
+  ) {
 
-updateDashboard();
+    closeCourse();
 
-updateCourseProgress();
+  }
+
+};
+
+
+renderAll();
 
 </script>
 
