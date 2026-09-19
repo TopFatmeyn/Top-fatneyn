@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOP.FATMEYN — Digital Platform</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#home"><span class="dot"></span>TOP.FATMEYN <small>Digital Platform</small></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#programs">Programs</a><a href="#dashboard">Dashboard</a><a href="#courses">Courses</a><a href="#news">News</a><a href="#apply">Apply</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+ <div><span class="eyebrow">V12 • PROFESSIONAL DIGITAL PLATFORM</span><h1>Learn. Build.<br><strong>Move forward.</strong></h1><p>A growing digital platform for practical technology, learning, projects and future opportunities.</p><div class="actions"><a class="btn" href="#courses">Explore Courses</a><a class="btn ghost" href="#dashboard">Open Dashboard →</a></div><div class="checks"><span>✓ Practical learning</span><span>✓ Mobile friendly</span><span>✓ Personal progress</span></div></div>
+ <aside class="hero-panel"><span class="online">● ONLINE</span><h3>Your digital space</h3><p>Manage learning, applications and progress from one place.</p><div class="hero-number"><b id="heroCourses">0</b><span>enrolled courses</span></div></aside>
+</section>
+
+<section id="about" class="section"><div class="section-head"><span>ABOUT</span><h2>A platform built to grow with you.</h2><p>TOP.FATMEYN is designed as one professional website with room for learning, services, applications, accounts, certificates and future digital systems.</p></div><div class="stats"><div><b>24/7</b><span>Digital access</span></div><div><b>V12</b><span>Current build</span></div><div><b>100%</b><span>Mobile ready</span></div></div></section>
+
+<section id="services" class="section alt"><div class="section-head"><span>SERVICES</span><h2>Explore platform services.</h2></div><div class="grid">
+<article class="card detail" data-title="Digital Resources" data-text="Useful guides, tools and practical resources can be organised here as the platform grows."><i>01</i><h3>Digital Resources</h3><p>Useful tools and learning materials.</p><button>View details →</button></article>
+<article class="card detail" data-title="Project Building" data-text="A future space for practical projects, experiments and technology ideas."><i>02</i><h3>Project Building</h3><p>Turn ideas into practical projects.</p><button>View details →</button></article>
+<article class="card detail" data-title="Digital Support" data-text="A flexible service layer for future applications, accounts and connected platform features."><i>03</i><h3>Digital Support</h3><p>Tools and support for platform users.</p><button>View details →</button></article>
+</div></section>
+
+<section id="programs" class="section"><div class="section-head"><span>PROGRAMS</span><h2>Choose your direction.</h2></div><div class="grid">
+<article class="card program" data-program="Web Development"><i>01</i><h3>Web Development</h3><p>HTML, CSS, JavaScript and practical projects.</p><button>Explore →</button></article>
+<article class="card program" data-program="AI & Automation"><i>02</i><h3>AI & Automation</h3><p>AI tools, prompting and useful workflows.</p><button>Explore →</button></article>
+<article class="card program" data-program="Cyber & Digital Skills"><i>03</i><h3>Cyber & Digital Skills</h3><p>Digital safety and practical technology skills.</p><button>Explore →</button></article>
+</div></section>
+
+<section id="dashboard" class="section alt"><div class="section-head"><span>MY DASHBOARD</span><h2>Your personal learning space.</h2><p>V12 adds a local profile, course progress, application history and notification centre.</p></div>
+<div class="dashboard">
+ <aside class="side">
+  <div class="profile-mini"><div class="avatar" id="avatar">T</div><div><b id="profileName">Demo User</b><small id="profileEmail">demo@topfatmeyn</small></div></div>
+  <button class="tab-btn active" data-tab="overview">Overview</button><button class="tab-btn" data-tab="profile">Profile</button><button class="tab-btn" data-tab="mycourses">My Courses</button><button class="tab-btn" data-tab="applications">Applications</button><button class="tab-btn" data-tab="certificates">Certificates</button><button class="tab-btn" data-tab="notifications">Notifications <em id="notifCount">1</em></button><button class="tab-btn" data-tab="settings">Settings</button>
+ </aside>
+ <div class="dash-main">
+  <div class="tab active" id="overview"><div class="dash-top"><div><small>ACCOUNT STATUS</small><h3>Welcome back 👋</h3></div><span class="pill">DEMO ACCOUNT</span></div><div class="progress-box"><div class="row"><b>Overall learning progress</b><strong id="overall">0%</strong></div><div class="bar"><span id="overallBar"></span></div></div><div class="tiles"><div><b id="enrolled">0</b><span>Enrolled courses</span></div><div><b id="done">0</b><span>Completed lessons</span></div><div><b>0</b><span>Certificates</span></div></div></div>
+  <div class="tab" id="profile"><h3>Profile</h3><form id="profileForm" class="profile-form"><label>Full name<input id="pName" required></label><label>Email<input id="pEmail" type="email" required></label><label>About you<textarea id="pAbout" placeholder="A short profile description..."></textarea></label><button class="btn">Save profile</button></form></div>
+  <div class="tab" id="mycourses"><h3>My Courses</h3><div id="myCourseList"></div></div>
+  <div class="tab" id="applications"><h3>Application history</h3><div id="appList" class="notice"></div></div>
+  <div class="tab" id="certificates"><h3>Certificates</h3><div class="empty">🏆 Your certificates will appear here when the certificate system is connected.</div></div>
+  <div class="tab" id="notifications"><h3>Notifications</h3><div class="notice"><b>Welcome to V12</b><br><small>Your dashboard and profile tools are ready.</small></div></div>
+  <div class="tab" id="settings"><h3>Account settings</h3><div class="settings-row"><span>Demo account</span><b>Active</b></div><button class="danger" id="reset">Reset local data</button></div>
+ </div>
+</div></section>
+
+<section id="courses" class="section"><div class="section-head"><span>COURSE CENTRE</span><h2>Learn at your pace.</h2><p>Enroll once, then open your dashboard to complete lessons and track progress.</p></div><div class="course-grid">
+<article class="course" data-name="Web Development Basics" data-lessons="HTML foundations|CSS styling|JavaScript basics|Build a mini website"><span>WEB</span><h3>Web Development Basics</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
+<article class="course" data-name="Digital Skills" data-lessons="Digital tools|Online safety|File management|Productivity basics"><span>SKILLS</span><h3>Digital Skills</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
+<article class="course" data-name="AI Tools" data-lessons="AI basics|Prompt writing|AI productivity|Practical workflow"><span>AI</span><h3>AI Tools</h3><p>4 lessons • Beginner</p><button class="btn enroll">Enroll course</button></article>
+</div></section>
+
+<section id="news" class="section alt"><div class="section-head"><span>NEWS & UPDATES</span><h2>Platform updates.</h2></div><div class="news-grid"><article><small>V12</small><h3>Personal dashboard upgraded</h3><p>Profiles, course progress, applications and notifications are now organised in one dashboard.</p></article><article><small>COURSES</small><h3>Learning centre is growing</h3><p>More course content can be added to the platform over time.</p></article></div></section>
+
+<section id="apply" class="section"><div class="section-head"><span>APPLICATIONS</span><h2>Send a request.</h2><p>Use the form to prepare a request and send it through WhatsApp.</p></div><form id="applyForm" class="form"><input id="aName" required placeholder="Full name"><select id="interest"><option>Web Development</option><option>AI & Automation</option><option>Cyber & Digital Skills</option><option>Creative Technology</option><option>Digital Resources</option><option>General enquiry</option></select><textarea id="aMessage" required placeholder="Tell us what you need..."></textarea><button class="btn">Send via WhatsApp</button></form></section>
+
+<section id="contact" class="section alt"><div class="section-head"><span>CONTACT</span><h2>Connect with TOP.FATMEYN.</h2></div><div class="contact"><a href="https://wa.me/255670675916">WhatsApp</a><a href="https://www.tiktok.com/@____yk4x">TikTok</a><a href="https://www.instagram.com/____yk4x">Instagram</a></div></section>
+</main><footer>© 2026 TOP.FATMEYN • Digital Platform</footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalBody"></div></div></div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const KEY="topfatmeyn_v12";let state=JSON.parse(localStorage.getItem(KEY)||'{"profile":{"name":"Demo User","email":"demo@topfatmeyn","about":""},"courses":{},"applications":[]}');
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
+function render(){
+ $("#profileName").textContent=state.profile.name||"Demo User";$("#profileEmail").textContent=state.profile.email||"demo@topfatmeyn";$("#avatar").textContent=(state.profile.name||"T").trim()[0].toUpperCase();
+ $("#pName").value=state.profile.name||"";$("#pEmail").value=state.profile.email||"";$("#pAbout").value=state.profile.about||"";
+ const cs=Object.values(state.courses), total=cs.reduce((a,c)=>a+c.lessons.length,0), done=cs.reduce((a,c)=>a+c.done.filter(Boolean).length,0), pct=total?Math.round(done/total*100):0;
+ $("#enrolled").textContent=cs.length;$("#heroCourses").textContent=cs.length;$("#done").textContent=done;$("#overall").textContent=pct+"%";$("#overallBar").style.width=pct+"%";
+ $("#notifCount").textContent="1";
+ $("#appList").innerHTML=state.applications.length?state.applications.map(a=>`<div class="app"><b>${a.interest}</b><span>Pending</span><small>${a.date}</small></div>`).join(""):"No applications submitted from this browser yet.";
+ $("#myCourseList").innerHTML=cs.length?cs.map(c=>{let p=Math.round(c.done.filter(Boolean).length/c.lessons.length*100);return `<div class="my-course"><div class="row"><b>${c.name}</b><strong>${p}%</strong></div><div class="bar"><span style="width:${p}%"></span></div><div class="lessons">${c.lessons.map((l,i)=>`<label><input type="checkbox" data-c="${c.name}" data-i="${i}" ${c.done[i]?'checked':''}> ${l}</label>`).join("")}</div></div>`}).join(""):"<div class='empty'>No courses yet. Enroll below.</div>";
+ $$("[data-c]").forEach(x=>x.onchange=()=>{state.courses[x.dataset.c].done[x.dataset.i]=x.checked;save();});
+}
+render();
+$("#menuBtn").onclick=()=>$("#nav").classList.toggle("open");$$("nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
+$$(".tab-btn").forEach(b=>b.onclick=()=>{$$(".tab-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");$$(".tab").forEach(x=>x.classList.remove("active"));$("#"+b.dataset.tab).classList.add("active")});
+$$(".enroll").forEach(b=>b.onclick=()=>{let c=b.closest(".course"),n=c.dataset.name;if(!state.courses[n])state.courses[n]={name:n,lessons:c.dataset.lessons.split("|"),done:[false,false,false,false]};save();location.hash="dashboard";});
+$("#profileForm").onsubmit=e=>{e.preventDefault();state.profile={name:$("#pName").value,email:$("#pEmail").value,about:$("#pAbout").value};save();alert("Profile saved.");};
+$("#reset").onclick=()=>{if(confirm("Reset all local V12 data?")){localStorage.removeItem(KEY);location.reload();}};
+$$(".detail").forEach(c=>c.querySelector("button").onclick=()=>{ $("#modalBody").innerHTML=`<h2>${c.dataset.title}</h2><p>${c.dataset.text}</p>`;$("#modal").classList.add("show")});
+$$(".program").forEach(c=>c.querySelector("button").onclick=()=>{ $("#modalBody").innerHTML=`<h2>${c.dataset.program}</h2><p>This program is structured for practical learning. Choose a related course from the Course Centre to start.</p><a class="btn" href="#courses" onclick="modal.classList.remove('show')">View courses</a>`;$("#modal").classList.add("show")});
+$("#close").onclick=()=>$("#modal").classList.remove("show");$("#modal").onclick=e=>{if(e.target.id==="modal")$("#modal").classList.remove("show")};
+$("#applyForm").onsubmit=e=>{e.preventDefault();let a={interest:$("#interest").value,date:new Date().toLocaleDateString()};state.applications.push(a);save();let text=`TOP.FATMEYN Request%0AName: ${encodeURIComponent($("#aName").value)}%0AInterest: ${encodeURIComponent($("#interest").value)}%0AMessage: ${encodeURIComponent($("#aMessage").value)}`;location.href="https://wa.me/255670675916?text="+text;};
+</script>
+</body></html>
