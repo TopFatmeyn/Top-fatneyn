@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOP.FATMEYN — Cyber Profile</title>
+<meta name="description" content="TOP.FATMEYN — Cybersecurity & Ethical Hacker">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="wash"></div>
+
+<main class="profile">
+  <div class="avatar-wrap">
+    <div class="ring"></div>
+    <img class="avatar" src="profile-topfatmeyn.jpg" alt="TOP.FATMEYN">
+    <span class="online-dot" title="Online"></span>
+  </div>
+
+  <h1>TOP.FATMEYN</h1>
+  <p class="handle">@official_abdoulrahim</p>
+  <p class="bio">CYBERSECURITY • ETHICAL HACKER<br><span>🇹🇿 ZANZIBAR · THINK DIFFERENT · STAY LEGAL</span></p>
+
+  <div class="status"><i></i> SYSTEM ONLINE <b>LIVE</b></div>
+
+  <section class="links">
+    <a class="link featured" href="https://www.tiktok.com/@official_abdoulrahim" target="_blank" rel="noopener"><span>◈</span> MY CYBER PROFILE <em>↗</em></a>
+    <a class="link" href="https://wa.me/" target="_blank" rel="noopener"><span>◉</span> WhatsApp <em>↗</em></a>
+    <a class="link" href="https://www.tiktok.com/@official_abdoulrahim" target="_blank" rel="noopener"><span>♪</span> TikTok <em>↗</em></a>
+    <a class="link" href="https://www.instagram.com/official_abdoulrahim/" target="_blank" rel="noopener"><span>◎</span> Instagram <em>↗</em></a>
+    <a class="link" href="https://www.youtube.com/" target="_blank" rel="noopener"><span>▶</span> YouTube <em>↗</em></a>
+    <a class="link" href="https://x.com/official_abdoulrahim" target="_blank" rel="noopener"><span>𝕏</span> X <em>↗</em></a>
+    <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span>in</span> LinkedIn <em>↗</em></a>
+    <a class="link" href="https://open.spotify.com/" target="_blank" rel="noopener"><span>●</span> Spotify <em>↗</em></a>
+  </section>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/official_abdoulrahim/" aria-label="Instagram">◎</a>
+    <a href="https://www.tiktok.com/@official_abdoulrahim" aria-label="TikTok">♪</a>
+    <a href="https://x.com/official_abdoulrahim" aria-label="X">𝕏</a>
+    <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+  </div>
+
+  <footer>TOP.FATMEYN <span>•</span> ZANZIBAR</footer>
+</main>
+
+<script>
+const c=document.getElementById('fx'),x=c.getContext('2d');
+let w,h,dpr,pts=[];
+function resize(){
+ dpr=Math.min(devicePixelRatio||1,2); w=innerWidth; h=innerHeight;
+ c.width=w*dpr;c.height=h*dpr;c.style.width=w+'px';c.style.height=h+'px';x.setTransform(dpr,0,0,dpr,0,0);
+ pts=Array.from({length:Math.min(95,Math.floor(w/10))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.18,r:Math.random()*1.5+.3,a:Math.random()*.55+.12}));
+}
+addEventListener('resize',resize); resize();
+let mx=0,my=0;
+addEventListener('pointermove',e=>{mx=(e.clientX/w-.5)*10;my=(e.clientY/h-.5)*10});
+function loop(){
+ x.clearRect(0,0,w,h);
+ for(const p of pts){
+   p.x+=p.vx;p.y+=p.vy;
+   if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
+   x.beginPath();x.fillStyle=`rgba(0,255,150,${p.a})`;x.arc(p.x+mx*.15,p.y+my*.15,p.r,0,Math.PI*2);x.fill();
+ }
+ for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+   const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy);
+   if(dist<115){x.strokeStyle=`rgba(0,255,170,${.08*(1-dist/115)})`;x.lineWidth=.7;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
+ }
+ requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body>
+</html>

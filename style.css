@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap');
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,sans-serif;color:#fff}
+body{background:#030806 url("zanzibar-cyber-bg.jpg") center/cover fixed;overflow-x:hidden}
+.wash{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,8,5,.78)),radial-gradient(circle at 50% 15%,rgba(0,255,130,.12),transparent 42%);z-index:-1}
+#fx{position:fixed;inset:0;z-index:0;pointer-events:none}
+.profile{position:relative;z-index:2;width:min(560px,calc(100% - 28px));margin:auto;padding:42px 0 28px;text-align:center}
+.avatar-wrap{position:relative;width:112px;height:112px;margin:0 auto 16px}
+.avatar{width:96px;height:96px;object-fit:cover;border-radius:50%;border:2px solid rgba(0,255,150,.9);position:absolute;inset:8px;box-shadow:0 0 24px rgba(0,255,150,.45),0 0 65px rgba(0,220,255,.16)}
+.ring{position:absolute;inset:0;border:1px solid rgba(0,255,170,.5);border-radius:50%;animation:spin 8s linear infinite;box-shadow:0 0 18px rgba(0,255,150,.3)}
+.ring:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#00ff88;top:-5px;left:50%;box-shadow:0 0 14px #00ff88}
+.online-dot{position:absolute;right:7px;bottom:8px;width:16px;height:16px;border-radius:50%;background:#00ff88;border:3px solid #06100b;box-shadow:0 0 14px #00ff88}
+h1{font-family:Orbitron,sans-serif;font-size:28px;letter-spacing:3px;margin:0;text-shadow:0 0 18px rgba(0,255,150,.38)}
+.handle{margin:7px 0 8px;color:#9de8c6;font-size:13px}
+.bio{font-size:12px;line-height:1.8;letter-spacing:1.2px;color:#eafff4;margin:0}.bio span{color:#8bcfb1}
+.status{display:inline-flex;align-items:center;gap:8px;margin:16px 0 18px;padding:7px 12px;border:1px solid rgba(0,255,150,.28);border-radius:999px;background:rgba(0,20,12,.46);backdrop-filter:blur(12px);font:600 10px Orbitron;letter-spacing:1.2px;color:#a8ffcf}
+.status i{width:7px;height:7px;background:#00ff88;border-radius:50%;box-shadow:0 0 10px #00ff88;animation:pulse 1.4s infinite}.status b{color:#00ff88;font-size:9px}
+.links{display:grid;gap:12px}.link{height:58px;display:flex;align-items:center;justify-content:center;position:relative;padding:0 48px;text-decoration:none;color:#fff;font-size:14px;font-weight:650;letter-spacing:.3px;border:1px solid rgba(255,255,255,.18);border-radius:17px;background:rgba(10,16,14,.48);backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.08);transition:.22s ease;overflow:hidden}
+.link:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent,rgba(0,255,150,.08),transparent);transform:translateX(-100%);transition:.55s}
+.link:hover{transform:translateY(-2px) scale(1.008);border-color:rgba(0,255,150,.55);box-shadow:0 0 24px rgba(0,255,150,.14),inset 0 1px rgba(255,255,255,.1)}
+.link:hover:before{transform:translateX(100%)}.link span{position:absolute;left:20px;color:#00ff9a;font-weight:800;text-shadow:0 0 12px rgba(0,255,150,.6)}.link em{position:absolute;right:20px;color:#7ed9b2;font-style:normal}.featured{border-color:rgba(0,255,150,.48);background:linear-gradient(100deg,rgba(0,255,150,.12),rgba(0,180,255,.08),rgba(0,255,150,.06));box-shadow:0 0 28px rgba(0,255,150,.1)}
+.socials{display:flex;justify-content:center;gap:12px;margin:22px 0 16px}.socials a{width:38px;height:38px;border:1px solid rgba(255,255,255,.15);border-radius:50%;display:grid;place-items:center;color:#c8ffe4;text-decoration:none;background:rgba(0,0,0,.25);backdrop-filter:blur(10px);transition:.2s}.socials a:hover{border-color:#00ff98;color:#00ff98;box-shadow:0 0 16px rgba(0,255,150,.22);transform:translateY(-2px)}
+footer{font:9px Orbitron;letter-spacing:2px;color:rgba(215,255,235,.5)}footer span{color:#00ff98;margin:0 5px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.35;transform:scale(.72)}}
+@media(max-width:520px){.profile{padding-top:28px;width:min(100% - 20px,560px)}h1{font-size:24px}.link{height:55px;border-radius:15px}.bio{font-size:11px}.avatar-wrap{transform:scale(.92);margin-bottom:8px}}
+@media(prefers-reduced-motion:reduce){.ring,.status i{animation:none}*{scroll-behavior:auto!important}}
